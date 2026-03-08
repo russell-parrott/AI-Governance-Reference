@@ -54,6 +54,7 @@ function showCard() {
 
 function renderResults(results) {
   setSchema(schemaForResults(results));
+  setCanonical(`https://russell-parrott.github.io/ai-governance-reference/search.html?search=${encodeURIComponent(searchInput.value.trim())}`);
   if (results.length === 0) {
     resultsPanel.innerHTML = `<p id="no-results">No cards found. Try a different term.</p>`;
     return;
@@ -82,6 +83,7 @@ function openCard(code) {
   const card = cardByCode(code, allCards);
   if (!card) return;
   setSchema(schemaForCard(card));
+  setCanonical(`https://russell-parrott.github.io/ai-governance-reference/search.html?search=${encodeURIComponent(titleSlug(card))}`);
 
   const relatedLinks = (card.related || []).map(relCode => {
     const rel = cardByCode(relCode, allCards);
@@ -180,6 +182,16 @@ function renderMarkdown(md) {
 
 // ── SCHEMA ─────────────────────────────────────────────────
 
+function setCanonical(url) {
+  let el = document.querySelector("link[rel='canonical']");
+  if (!el) {
+    el = document.createElement("link");
+    el.rel = "canonical";
+    document.head.appendChild(el);
+  }
+  el.href = url;
+}
+
 function setSchema(obj) {
   let el = document.getElementById("dynamic-schema");
   if (!el) {
@@ -219,10 +231,10 @@ function schemaForCard(card) {
     "identifier": card.code,
     "inDefinedTermSet": {
       "@type": "DefinedTermSet",
-      "name": "AI Governance Atlas",
+      "name": "AI Governance Reference",
       "url": "https://russell-parrott.github.io/ai-governance-reference/"
     },
-    "url": `https://russell-parrott.github.io/ai-governance-reference/search.html?search=${encodeURIComponent(titleSlug(card))}`
+    "url": `https://russell-parrott.github.io/ai-governance-reference//search.html?search=${encodeURIComponent(titleSlug(card))}`
   };
 }
 
