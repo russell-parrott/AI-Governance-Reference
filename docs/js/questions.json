@@ -1,0 +1,3222 @@
+[
+  {
+    "question": "Is the intended use of the system written down somewhere?",
+    "category": "SP",
+    "core": false,
+    "related": [
+      "SP-09",
+      "SP-08",
+      "SP-10"
+    ]
+  },
+  {
+    "question": "Does the organisation know what data the system was trained on?",
+    "category": "SP",
+    "core": true,
+    "related": [
+      "SP-02",
+      "SP-04",
+      "SP-05"
+    ]
+  },
+  {
+    "question": "Are the boundaries of the system — what it will and will not do — defined?",
+    "category": "SP",
+    "core": false,
+    "related": [
+      "SP-08",
+      "SP-03",
+      "SP-09"
+    ]
+  },
+  {
+    "question": "Does the organisation know what inputs the system receives?",
+    "category": "SP",
+    "core": false,
+    "related": [
+      "SP-13",
+      "SP-04",
+      "SP-05"
+    ]
+  },
+  {
+    "question": "Does the organisation know what outputs the system produces?",
+    "category": "SP",
+    "core": false,
+    "related": [
+      "SP-14",
+      "SP-13",
+      "SP-16"
+    ]
+  },
+  {
+    "question": "Are the known limitations of the system documented?",
+    "category": "SP",
+    "core": true,
+    "related": [
+      "SP-03",
+      "SP-08",
+      "SP-17"
+    ]
+  },
+  {
+    "question": "Is there a record of what the system is not designed to do?",
+    "category": "SP",
+    "core": false,
+    "related": [
+      "SP-10",
+      "SP-09",
+      "SP-08"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether any part of the system was built or supplied by a third party?",
+    "category": "SP",
+    "core": false,
+    "related": [
+      "SP-11",
+      "SP-12",
+      "SP-18"
+    ]
+  },
+  {
+    "question": "Has the system ever been assessed for bias in its outputs?",
+    "category": "SP",
+    "core": true,
+    "related": [
+      "SP-06",
+      "GV-02",
+      "SP-19"
+    ]
+  },
+  {
+    "question": "Can someone in the organisation explain why the system produced a specific output in a specific case?",
+    "category": "SP",
+    "core": true,
+    "related": [
+      "SP-16",
+      "SP-15",
+      "RE-10"
+    ]
+  },
+  {
+    "question": "Does the organisation know how well the system performs — its accuracy and error rates?",
+    "category": "SP",
+    "core": false,
+    "related": [
+      "SP-17",
+      "CS-01",
+      "CS-05"
+    ]
+  },
+  {
+    "question": "Is there a process for identifying when the system is being used outside its intended scope?",
+    "category": "SP",
+    "core": false,
+    "related": [
+      "SP-10",
+      "SP-09",
+      "CS-06"
+    ]
+  },
+  {
+    "question": "When the system is updated, is the change documented?",
+    "category": "SP",
+    "core": false,
+    "related": [
+      "SP-07",
+      "CS-10",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "Is there any evidence that the system's outputs are fair across different groups of people?",
+    "category": "SP",
+    "core": false,
+    "related": [
+      "SP-19",
+      "GV-02",
+      "SP-17"
+    ]
+  },
+  {
+    "question": "Is there documentation describing what the system is, how it works, and what it is for?",
+    "category": "SP",
+    "core": true,
+    "related": [
+      "RE-13",
+      "SP-09",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "If the system produced a wrong output today, would anyone in the organisation know about it?",
+    "category": "SP",
+    "core": true,
+    "related": [
+      "CS-01",
+      "CS-07",
+      "SP-17"
+    ]
+  },
+  {
+    "question": "Has anyone checked whether the system behaves differently for some groups than others?",
+    "category": "SP",
+    "core": false,
+    "related": [
+      "SP-06",
+      "SP-19",
+      "GV-02"
+    ]
+  },
+  {
+    "question": "Is there a named individual who is accountable for this system?",
+    "category": "AR",
+    "core": true,
+    "related": [
+      "AR-01",
+      "AR-05",
+      "GQ-04"
+    ]
+  },
+  {
+    "question": "Is that accountability written down — not just understood informally?",
+    "category": "AR",
+    "core": true,
+    "related": [
+      "AR-01",
+      "AR-N01",
+      "GQ-04"
+    ]
+  },
+  {
+    "question": "Does the accountable person know they are accountable?",
+    "category": "AR",
+    "core": false,
+    "related": [
+      "AR-01",
+      "AR-05",
+      "AR-09"
+    ]
+  },
+  {
+    "question": "Is it clear who has the authority to approve changes to the system?",
+    "category": "AR",
+    "core": false,
+    "related": [
+      "AR-04",
+      "AR-02",
+      "CS-10"
+    ]
+  },
+  {
+    "question": "Does the board know this system exists and what it does?",
+    "category": "AR",
+    "core": false,
+    "related": [
+      "AR-06",
+      "AR-07",
+      "AR-10"
+    ]
+  },
+  {
+    "question": "Is there a defined escalation path if something goes wrong?",
+    "category": "AR",
+    "core": false,
+    "related": [
+      "AR-04",
+      "CS-02",
+      "CS-12"
+    ]
+  },
+  {
+    "question": "If the accountable person left tomorrow, would their responsibilities transfer clearly?",
+    "category": "AR",
+    "core": true,
+    "related": [
+      "AR-05",
+      "AR-09",
+      "AR-12"
+    ]
+  },
+  {
+    "question": "Are roles and responsibilities defined specifically for this system — not just for the organisation generally?",
+    "category": "AR",
+    "core": false,
+    "related": [
+      "AR-05",
+      "AR-01",
+      "AR-10"
+    ]
+  },
+  {
+    "question": "Is it clear who is responsible for the system when a vendor supplies part of it?",
+    "category": "AR",
+    "core": false,
+    "related": [
+      "AR-08",
+      "SP-18",
+      "LR-04"
+    ]
+  },
+  {
+    "question": "Is there a gap between what governance documents say and what actually happens in practice?",
+    "category": "AR",
+    "core": false,
+    "related": [
+      "AR-11",
+      "AR-12",
+      "AR-N11"
+    ]
+  },
+  {
+    "question": "Does management receive regular information about how the system is performing?",
+    "category": "AR",
+    "core": false,
+    "related": [
+      "AR-07",
+      "CS-09",
+      "SP-17"
+    ]
+  },
+  {
+    "question": "Is authority to act formally delegated — not just assumed?",
+    "category": "AR",
+    "core": false,
+    "related": [
+      "AR-09",
+      "AR-04",
+      "AR-05"
+    ]
+  },
+  {
+    "question": "If something went wrong today, could the organisation identify within one hour who is responsible?",
+    "category": "AR",
+    "core": true,
+    "related": [
+      "AR-01",
+      "AR-12",
+      "GQ-04"
+    ]
+  },
+  {
+    "question": "Has anyone ever actually been asked to answer for something this system did?",
+    "category": "AR",
+    "core": true,
+    "related": [
+      "AR-01",
+      "AR-N01",
+      "AR-11"
+    ]
+  },
+  {
+    "question": "Could the organisation point to a document that says who is in charge of this system?",
+    "category": "AR",
+    "core": false,
+    "related": [
+      "AR-05",
+      "GQ-04",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Is the system monitored while it is running?",
+    "category": "CS",
+    "core": false,
+    "related": [
+      "CS-01",
+      "CS-05",
+      "CS-07"
+    ]
+  },
+  {
+    "question": "Are there alerts that fire when the system behaves unexpectedly?",
+    "category": "CS",
+    "core": false,
+    "related": [
+      "CS-07",
+      "CS-01",
+      "CS-02"
+    ]
+  },
+  {
+    "question": "Does a person review the system's outputs — or does it run without human attention?",
+    "category": "CS",
+    "core": false,
+    "related": [
+      "CS-03",
+      "AR-03",
+      "AR-N04"
+    ]
+  },
+  {
+    "question": "Can a person override a decision the system has made?",
+    "category": "CS",
+    "core": true,
+    "related": [
+      "CS-13",
+      "CS-04",
+      "GQ-01"
+    ]
+  },
+  {
+    "question": "Is there a defined process for handling cases the system was not designed for?",
+    "category": "CS",
+    "core": false,
+    "related": [
+      "CS-06",
+      "SP-10",
+      "SP-03"
+    ]
+  },
+  {
+    "question": "If the system produced an obviously wrong output today, would anyone notice?",
+    "category": "CS",
+    "core": true,
+    "related": [
+      "CS-01",
+      "CS-07",
+      "CS-05"
+    ]
+  },
+  {
+    "question": "Is there a process for escalating concerns about the system's behaviour?",
+    "category": "CS",
+    "core": false,
+    "related": [
+      "CS-02",
+      "CS-12",
+      "AR-04"
+    ]
+  },
+  {
+    "question": "Can the system be stopped quickly if needed?",
+    "category": "CS",
+    "core": true,
+    "related": [
+      "CS-11",
+      "CS-04",
+      "GQ-05"
+    ]
+  },
+  {
+    "question": "Has the system been tested to confirm it works as intended?",
+    "category": "CS",
+    "core": false,
+    "related": [
+      "CS-08",
+      "SP-17",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "When the system is changed, is it tested before the change goes live?",
+    "category": "CS",
+    "core": false,
+    "related": [
+      "CS-08",
+      "CS-10",
+      "SP-07"
+    ]
+  },
+  {
+    "question": "Are operational reviews of the system held on a regular basis?",
+    "category": "CS",
+    "core": false,
+    "related": [
+      "CS-09",
+      "RE-11",
+      "GV-01"
+    ]
+  },
+  {
+    "question": "Does the person responsible for oversight have the authority to act — not just to observe?",
+    "category": "CS",
+    "core": true,
+    "related": [
+      "CS-04",
+      "AR-04",
+      "AR-N04"
+    ]
+  },
+  {
+    "question": "Is there a record of when the system was last reviewed?",
+    "category": "CS",
+    "core": false,
+    "related": [
+      "CS-09",
+      "RE-11",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "If the system needed to be stopped right now, does anyone know how to do it?",
+    "category": "CS",
+    "core": true,
+    "related": [
+      "CS-11",
+      "GQ-05",
+      "CS-04"
+    ]
+  },
+  {
+    "question": "Can the organisation reconstruct what the system did in a specific case?",
+    "category": "RE",
+    "core": true,
+    "related": [
+      "RE-01",
+      "RE-02",
+      "GQ-02"
+    ]
+  },
+  {
+    "question": "Are records of individual decisions kept?",
+    "category": "RE",
+    "core": false,
+    "related": [
+      "RE-02",
+      "RE-01",
+      "LR-05"
+    ]
+  },
+  {
+    "question": "Are system logs retained — and does the organisation know for how long?",
+    "category": "RE",
+    "core": false,
+    "related": [
+      "RE-03",
+      "RE-08",
+      "LR-05"
+    ]
+  },
+  {
+    "question": "If a decision from six months ago was challenged today, could the organisation explain it?",
+    "category": "RE",
+    "core": true,
+    "related": [
+      "RE-02",
+      "RE-01",
+      "GQ-02"
+    ]
+  },
+  {
+    "question": "Are complaints about the system recorded systematically — not just handled and forgotten?",
+    "category": "RE",
+    "core": true,
+    "related": [
+      "GQ-03",
+      "RE-04",
+      "RE-09"
+    ]
+  },
+  {
+    "question": "Would the organisation's records survive a regulatory investigation?",
+    "category": "RE",
+    "core": true,
+    "related": [
+      "RE-05",
+      "RE-12",
+      "LR-06"
+    ]
+  },
+  {
+    "question": "Is there documentation that describes what the system is and how it works?",
+    "category": "RE",
+    "core": false,
+    "related": [
+      "RE-13",
+      "RE-07",
+      "SP-16"
+    ]
+  },
+  {
+    "question": "Are incident records kept when something goes wrong?",
+    "category": "RE",
+    "core": false,
+    "related": [
+      "RE-04",
+      "CS-12",
+      "LR-11"
+    ]
+  },
+  {
+    "question": "Is evidence preserved after an incident — before it can be overwritten or lost?",
+    "category": "RE",
+    "core": false,
+    "related": [
+      "RE-05",
+      "RE-06",
+      "LR-06"
+    ]
+  },
+  {
+    "question": "Are records accurate — or do they describe what should have happened rather than what did?",
+    "category": "RE",
+    "core": false,
+    "related": [
+      "RE-09",
+      "RE-02",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "Does the organisation know how long it is legally required to keep records of this system's decisions?",
+    "category": "RE",
+    "core": false,
+    "related": [
+      "RE-08",
+      "LR-05",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Is there a record of what the system was doing at the time of a past incident?",
+    "category": "RE",
+    "core": false,
+    "related": [
+      "RE-06",
+      "RE-03",
+      "RE-05"
+    ]
+  },
+  {
+    "question": "Can the organisation produce a complete record of a specific decision — inputs, output, and what happened next?",
+    "category": "RE",
+    "core": true,
+    "related": [
+      "RE-02",
+      "RE-01",
+      "RE-03"
+    ]
+  },
+  {
+    "question": "If a journalist asked what decision the system made about a named individual, could the organisation answer?",
+    "category": "RE",
+    "core": true,
+    "related": [
+      "RE-02",
+      "GQ-02",
+      "SP-16"
+    ]
+  },
+  {
+    "question": "Does the organisation know which regulator oversees this system?",
+    "category": "LR",
+    "core": true,
+    "related": [
+      "LR-02",
+      "LR-03",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Do individuals affected by the system's decisions have legal rights — and does the organisation know what they are?",
+    "category": "LR",
+    "core": false,
+    "related": [
+      "LR-01",
+      "LR-N03",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Can an affected individual request a human review of a decision made about them?",
+    "category": "LR",
+    "core": false,
+    "related": [
+      "LR-01",
+      "CS-13",
+      "CS-03"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether this system is classified as high risk under applicable regulation?",
+    "category": "LR",
+    "core": false,
+    "related": [
+      "LR-13",
+      "LR-02",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "Is the organisation aware of its legal record-keeping obligations for this system?",
+    "category": "LR",
+    "core": false,
+    "related": [
+      "LR-05",
+      "RE-08",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "Does the organisation have reporting obligations if something goes wrong — and does it know what they are?",
+    "category": "LR",
+    "core": false,
+    "related": [
+      "LR-11",
+      "RE-04",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "Could a regulator demand to see records of this system's decisions?",
+    "category": "LR",
+    "core": false,
+    "related": [
+      "LR-06",
+      "LR-07",
+      "RE-12"
+    ]
+  },
+  {
+    "question": "Could a regulator order this system to stop operating?",
+    "category": "LR",
+    "core": true,
+    "related": [
+      "LR-12",
+      "LR-07",
+      "CS-11"
+    ]
+  },
+  {
+    "question": "Is the organisation aware of its data protection obligations in relation to this system?",
+    "category": "LR",
+    "core": false,
+    "related": [
+      "LR-10",
+      "LR-01",
+      "RE-08"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether it could be held liable if the system causes harm?",
+    "category": "LR",
+    "core": true,
+    "related": [
+      "LR-04",
+      "LR-08",
+      "GV-03"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed whether the system's outputs could constitute discrimination?",
+    "category": "LR",
+    "core": false,
+    "related": [
+      "SP-19",
+      "GV-02",
+      "LR-04"
+    ]
+  },
+  {
+    "question": "Does the organisation know what consumer protection obligations apply to this system?",
+    "category": "LR",
+    "core": false,
+    "related": [
+      "LR-09",
+      "LR-01",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "If the regulator arrived tomorrow, could the organisation demonstrate how the system is governed?",
+    "category": "LR",
+    "core": true,
+    "related": [
+      "LR-06",
+      "AR-01",
+      "RE-12"
+    ]
+  },
+  {
+    "question": "Has the organisation checked whether any use of this system is prohibited under applicable law?",
+    "category": "LR",
+    "core": false,
+    "related": [
+      "LR-13",
+      "LR-02",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "Is anyone in the organisation responsible for tracking changes in the law that affect this system?",
+    "category": "LR",
+    "core": true,
+    "related": [
+      "LR-02",
+      "LR-03",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether the EU AI Act applies to any of its systems?",
+    "category": "LL-01",
+    "core": true,
+    "related": [
+      "LL-01",
+      "LR-13",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "Has any system the organisation deploys been assessed for its risk classification under the EU AI Act?",
+    "category": "LL-01",
+    "core": true,
+    "related": [
+      "LL-01",
+      "LR-13",
+      "SP-09"
+    ]
+  },
+  {
+    "question": "Does the organisation know what a conformity assessment is and whether it has conducted one?",
+    "category": "LL-01",
+    "core": false,
+    "related": [
+      "LL-01",
+      "LR-13",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Is there anyone in the organisation whose job includes tracking EU AI Act compliance obligations?",
+    "category": "LL-01",
+    "core": false,
+    "related": [
+      "LL-01",
+      "AR-01",
+      "AR-05"
+    ]
+  },
+  {
+    "question": "Does the organisation know which of its systems would be classified as high risk under the EU AI Act?",
+    "category": "LL-01",
+    "core": true,
+    "related": [
+      "LL-01",
+      "LR-13",
+      "SP-09"
+    ]
+  },
+  {
+    "question": "Is the technical documentation required for high-risk systems under the EU AI Act in place?",
+    "category": "LL-01",
+    "core": false,
+    "related": [
+      "LL-01",
+      "RE-13",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "Does the organisation know that the EU AI Act applies to organisations outside the EU if their systems affect people inside it?",
+    "category": "LL-01",
+    "core": true,
+    "related": [
+      "LL-01",
+      "LR-02",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Has the organisation considered whether any of its systems would be prohibited under the EU AI Act?",
+    "category": "LL-01",
+    "core": false,
+    "related": [
+      "LL-01",
+      "LR-13",
+      "SP-09"
+    ]
+  },
+  {
+    "question": "Does the organisation have a process for updating conformity assessments when systems change significantly?",
+    "category": "LL-01",
+    "core": false,
+    "related": [
+      "LL-01",
+      "CS-10",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Is the organisation aware that fines under the EU AI Act can reach seven percent of global annual turnover?",
+    "category": "LL-01",
+    "core": false,
+    "related": [
+      "LL-01",
+      "LR-07",
+      "LR-04"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether its vendor-supplied AI systems carry EU AI Act obligations for the deployer?",
+    "category": "LL-01",
+    "core": true,
+    "related": [
+      "LL-01",
+      "AR-08",
+      "SP-18"
+    ]
+  },
+  {
+    "question": "Has human oversight been designed into any high-risk systems as a requirement rather than added afterwards?",
+    "category": "LL-01",
+    "core": false,
+    "related": [
+      "LL-01",
+      "AR-03",
+      "CS-13"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether any of its AI systems process personal data?",
+    "category": "LL-02",
+    "core": true,
+    "related": [
+      "LL-02",
+      "LR-10",
+      "SP-04"
+    ]
+  },
+  {
+    "question": "Has a lawful basis for processing personal data been identified and documented for each AI system that uses it?",
+    "category": "LL-02",
+    "core": true,
+    "related": [
+      "LL-02",
+      "LR-10",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "Does the organisation know that individuals have a right to an explanation of automated decisions made about them?",
+    "category": "LL-02",
+    "core": true,
+    "related": [
+      "LL-02",
+      "LR-01",
+      "SP-16"
+    ]
+  },
+  {
+    "question": "Can the organisation actually deliver an individual-level explanation of a specific automated decision if asked?",
+    "category": "LL-02",
+    "core": true,
+    "related": [
+      "LL-02",
+      "SP-16",
+      "RE-10"
+    ]
+  },
+  {
+    "question": "Does the organisation maintain records of its data processing activities as required by data protection law?",
+    "category": "LL-02",
+    "core": false,
+    "related": [
+      "LL-02",
+      "RE-07",
+      "LR-05"
+    ]
+  },
+  {
+    "question": "Has the organisation defined retention periods for personal data processed by its AI systems?",
+    "category": "LL-02",
+    "core": false,
+    "related": [
+      "LL-02",
+      "RE-08",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Does the organisation know that data protection accountability requires it to demonstrate compliance — not just achieve it?",
+    "category": "LL-02",
+    "core": false,
+    "related": [
+      "LL-02",
+      "AR-01",
+      "AR-N01"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed whether its AI systems engage in profiling of individuals?",
+    "category": "LL-02",
+    "core": false,
+    "related": [
+      "LL-02",
+      "LR-10",
+      "SP-01"
+    ]
+  },
+  {
+    "question": "Does the organisation know which data protection authority supervises its processing activities?",
+    "category": "LL-02",
+    "core": false,
+    "related": [
+      "LL-02",
+      "LR-02",
+      "LR-06"
+    ]
+  },
+  {
+    "question": "Could the organisation respond to a data subject access request relating to an automated decision within the legal timeframe?",
+    "category": "LL-02",
+    "core": true,
+    "related": [
+      "LL-02",
+      "LR-01",
+      "RE-02"
+    ]
+  },
+  {
+    "question": "Does the organisation know that GDPR fines can reach four percent of global annual turnover?",
+    "category": "LL-02",
+    "core": false,
+    "related": [
+      "LL-02",
+      "LR-07",
+      "LR-04"
+    ]
+  },
+  {
+    "question": "Has the organisation considered data minimisation — whether its AI systems use only the data they actually need?",
+    "category": "LL-02",
+    "core": false,
+    "related": [
+      "LL-02",
+      "SP-04",
+      "SP-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed whether any of its AI systems influence decisions about people in protected categories?",
+    "category": "LL-03",
+    "core": true,
+    "related": [
+      "LL-03",
+      "SP-19",
+      "GV-02"
+    ]
+  },
+  {
+    "question": "Does the organisation know that discrimination law applies to outcomes — not just intentions?",
+    "category": "LL-03",
+    "core": true,
+    "related": [
+      "LL-03",
+      "SP-19",
+      "GV-N06"
+    ]
+  },
+  {
+    "question": "Has the system ever been tested to check whether its outputs differ systematically across demographic groups?",
+    "category": "LL-03",
+    "core": true,
+    "related": [
+      "LL-03",
+      "SP-17",
+      "SP-06"
+    ]
+  },
+  {
+    "question": "Does the organisation understand what indirect discrimination is and how AI systems can produce it?",
+    "category": "LL-03",
+    "core": false,
+    "related": [
+      "LL-03",
+      "GV-02",
+      "SP-06"
+    ]
+  },
+  {
+    "question": "Has the organisation checked whether any input variables used by the system act as proxies for protected characteristics?",
+    "category": "LL-03",
+    "core": true,
+    "related": [
+      "LL-03",
+      "SP-06",
+      "SP-13"
+    ]
+  },
+  {
+    "question": "Does the organisation know that training on historical data can embed historical discrimination into its systems?",
+    "category": "LL-03",
+    "core": false,
+    "related": [
+      "LL-03",
+      "SP-02",
+      "GV-02"
+    ]
+  },
+  {
+    "question": "Are records kept that would allow the organisation to demonstrate non-discriminatory outcomes if challenged?",
+    "category": "LL-03",
+    "core": true,
+    "related": [
+      "LL-03",
+      "RE-02",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed discrimination risk for systems used in hiring, credit, housing or benefits decisions?",
+    "category": "LL-03",
+    "core": false,
+    "related": [
+      "LL-03",
+      "SP-09",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Does the organisation know which equality law applies in each jurisdiction where its systems operate?",
+    "category": "LL-03",
+    "core": false,
+    "related": [
+      "LL-03",
+      "LR-02",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "Is there a process for reviewing system outputs if a discrimination complaint is received?",
+    "category": "LL-03",
+    "core": false,
+    "related": [
+      "LL-03",
+      "CS-03",
+      "RE-04"
+    ]
+  },
+  {
+    "question": "Does the organisation understand that it cannot defend a discrimination claim simply by showing the system treated everyone the same way?",
+    "category": "LL-03",
+    "core": false,
+    "related": [
+      "LL-03",
+      "SP-19",
+      "GV-N06"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether any of its AI systems are used in consumer-facing decisions?",
+    "category": "LL-04",
+    "core": false,
+    "related": [
+      "LL-04",
+      "SP-09",
+      "SP-14"
+    ]
+  },
+  {
+    "question": "Are consumers told when they are interacting with an automated system rather than a person?",
+    "category": "LL-04",
+    "core": true,
+    "related": [
+      "LL-04",
+      "SP-15",
+      "GV-N05"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether its recommendation systems are optimised for the consumer's benefit or the organisation's revenue?",
+    "category": "LL-04",
+    "core": true,
+    "related": [
+      "LL-04",
+      "SP-09",
+      "SP-N02"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed whether its AI-driven pricing could be considered manipulative or deceptive under consumer law?",
+    "category": "LL-04",
+    "core": true,
+    "related": [
+      "LL-04",
+      "SP-14",
+      "LR-09"
+    ]
+  },
+  {
+    "question": "Does the organisation know what dark patterns are and whether its systems use them?",
+    "category": "LL-04",
+    "core": false,
+    "related": [
+      "LL-04",
+      "SP-09",
+      "SP-14"
+    ]
+  },
+  {
+    "question": "Are consumers given accurate information about what the AI system does and how it works?",
+    "category": "LL-04",
+    "core": false,
+    "related": [
+      "LL-04",
+      "SP-15",
+      "SP-16"
+    ]
+  },
+  {
+    "question": "Does the organisation know that consumer protection liability attaches to the deploying organisation — not the vendor who built the system?",
+    "category": "LL-04",
+    "core": true,
+    "related": [
+      "LL-04",
+      "AR-08",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Are records kept of what the system showed specific consumers — prices, recommendations, options presented?",
+    "category": "LL-04",
+    "core": false,
+    "related": [
+      "LL-04",
+      "RE-02",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Has the organisation checked whether its AI systems comply with consumer protection law in every jurisdiction where they operate?",
+    "category": "LL-04",
+    "core": false,
+    "related": [
+      "LL-04",
+      "LR-02",
+      "LR-09"
+    ]
+  },
+  {
+    "question": "Does the organisation know which consumer protection regulator has jurisdiction over its AI-driven consumer interactions?",
+    "category": "LL-04",
+    "core": false,
+    "related": [
+      "LL-04",
+      "LR-02",
+      "LR-09"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether any of its AI systems could be classified as a product under applicable law?",
+    "category": "LL-05",
+    "core": true,
+    "related": [
+      "LL-05",
+      "LR-13",
+      "SP-09"
+    ]
+  },
+  {
+    "question": "Is the organisation aware that the EU's revised Product Liability Directive explicitly covers AI software?",
+    "category": "LL-05",
+    "core": true,
+    "related": [
+      "LL-05",
+      "LR-04",
+      "LL-01"
+    ]
+  },
+  {
+    "question": "Has the organisation documented the conditions of safe use and known limitations of its AI systems?",
+    "category": "LL-05",
+    "core": true,
+    "related": [
+      "LL-05",
+      "SP-03",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Does the organisation know that a product can be legally defective even if it operates within its technical specifications?",
+    "category": "LL-05",
+    "core": false,
+    "related": [
+      "LL-05",
+      "SP-03",
+      "GV-03"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed the failure modes of its AI systems and documented what happens when they go wrong?",
+    "category": "LL-05",
+    "core": false,
+    "related": [
+      "LL-05",
+      "SP-03",
+      "GV-N14"
+    ]
+  },
+  {
+    "question": "Does the organisation understand its product liability exposure when it integrates third-party AI components into its systems?",
+    "category": "LL-05",
+    "core": true,
+    "related": [
+      "LL-05",
+      "SP-18",
+      "AR-08"
+    ]
+  },
+  {
+    "question": "Are warnings and instructions about the system's limitations provided to users in a form they can act on?",
+    "category": "LL-05",
+    "core": false,
+    "related": [
+      "LL-05",
+      "SP-15",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Is there a process for identifying and reporting safety-relevant AI system failures?",
+    "category": "LL-05",
+    "core": false,
+    "related": [
+      "LL-05",
+      "CS-12",
+      "RE-04"
+    ]
+  },
+  {
+    "question": "Has the organisation considered post-market surveillance obligations for AI systems embedded in physical products?",
+    "category": "LL-05",
+    "core": false,
+    "related": [
+      "LL-05",
+      "CS-01",
+      "CS-09"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether its AI systems are subject to sector-specific product safety standards?",
+    "category": "LL-05",
+    "core": false,
+    "related": [
+      "LL-05",
+      "LL-11",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Does the organisation use AI systems to set prices or respond to competitor pricing?",
+    "category": "LL-06",
+    "core": true,
+    "related": [
+      "LL-06",
+      "SP-09",
+      "SP-14"
+    ]
+  },
+  {
+    "question": "Does the organisation understand that algorithmic pricing coordination can breach competition law even without explicit agreement?",
+    "category": "LL-06",
+    "core": true,
+    "related": [
+      "LL-06",
+      "AR-01",
+      "AR-06"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed whether using the same pricing algorithm as competitors creates competition law risk?",
+    "category": "LL-06",
+    "core": true,
+    "related": [
+      "LL-06",
+      "SP-11",
+      "SP-12"
+    ]
+  },
+  {
+    "question": "Are records kept of algorithmic pricing decisions and the data inputs that drove them?",
+    "category": "LL-06",
+    "core": true,
+    "related": [
+      "LL-06",
+      "RE-02",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "Is the board aware of the competition law implications of the organisation's algorithmic pricing systems?",
+    "category": "LL-06",
+    "core": false,
+    "related": [
+      "LL-06",
+      "AR-06",
+      "AR-07"
+    ]
+  },
+  {
+    "question": "Does the organisation monitor its algorithmic pricing outputs for patterns that could attract regulatory attention?",
+    "category": "LL-06",
+    "core": false,
+    "related": [
+      "LL-06",
+      "CS-01",
+      "CS-05"
+    ]
+  },
+  {
+    "question": "Does the organisation know which competition authority has jurisdiction over its pricing algorithms?",
+    "category": "LL-06",
+    "core": false,
+    "related": [
+      "LL-06",
+      "LR-02",
+      "LR-06"
+    ]
+  },
+  {
+    "question": "Has the organisation considered whether AI-driven market behaviour could be interpreted as abuse of a dominant position?",
+    "category": "LL-06",
+    "core": false,
+    "related": [
+      "LL-06",
+      "SP-09",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Does the organisation understand that competition law liability attaches to the organisation — not the algorithm that made the pricing decision?",
+    "category": "LL-06",
+    "core": false,
+    "related": [
+      "LL-06",
+      "AR-01",
+      "AR-N01"
+    ]
+  },
+  {
+    "question": "Could the organisation produce documentation of what its pricing algorithms were doing, and why, if a competition authority asked?",
+    "category": "LL-06",
+    "core": true,
+    "related": [
+      "LL-06",
+      "RE-07",
+      "RE-02"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether any of its AI systems are used in regulated financial services activities?",
+    "category": "LL-07",
+    "core": true,
+    "related": [
+      "LL-07",
+      "SP-09",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Can the organisation explain the basis for individual credit decisions, investment recommendations or other regulated financial decisions made by AI?",
+    "category": "LL-07",
+    "core": true,
+    "related": [
+      "LL-07",
+      "SP-16",
+      "RE-10"
+    ]
+  },
+  {
+    "question": "Are records of AI-driven financial decisions maintained to the standard that financial regulators require?",
+    "category": "LL-07",
+    "core": true,
+    "related": [
+      "LL-07",
+      "RE-01",
+      "RE-02"
+    ]
+  },
+  {
+    "question": "Does the organisation have a named individual accountable for AI systems used in financial services?",
+    "category": "LL-07",
+    "core": true,
+    "related": [
+      "LL-07",
+      "AR-01",
+      "AR-05"
+    ]
+  },
+  {
+    "question": "Has the organisation conducted model risk management assessment for AI systems used in credit, trading or risk functions?",
+    "category": "LL-07",
+    "core": false,
+    "related": [
+      "LL-07",
+      "GV-N14",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Does the organisation know its obligations under DORA or equivalent operational resilience frameworks?",
+    "category": "LL-07",
+    "core": false,
+    "related": [
+      "LL-07",
+      "CS-11",
+      "LL-08"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed the governance of third-party AI providers used in financial services as required by DORA?",
+    "category": "LL-07",
+    "core": false,
+    "related": [
+      "LL-07",
+      "SP-18",
+      "AR-08"
+    ]
+  },
+  {
+    "question": "Are AI systems used in financial advice or investment recommendations meeting applicable suitability standards?",
+    "category": "LL-07",
+    "core": false,
+    "related": [
+      "LL-07",
+      "SP-09",
+      "SP-17"
+    ]
+  },
+  {
+    "question": "Does the organisation know that financial services regulators have published specific expectations for AI governance?",
+    "category": "LL-07",
+    "core": false,
+    "related": [
+      "LL-07",
+      "LR-02",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "Can algorithmic trading systems be stopped immediately if they begin behaving unexpectedly?",
+    "category": "LL-07",
+    "core": true,
+    "related": [
+      "LL-07",
+      "CS-11",
+      "GQ-05"
+    ]
+  },
+  {
+    "question": "Does the organisation know which financial regulator has jurisdiction over its AI-driven activities in each market?",
+    "category": "LL-07",
+    "core": false,
+    "related": [
+      "LL-07",
+      "LR-02",
+      "LR-11"
+    ]
+  },
+  {
+    "question": "Does the organisation operate within a sector that is classified as critical infrastructure in any jurisdiction?",
+    "category": "LL-08",
+    "core": true,
+    "related": [
+      "LL-08",
+      "LR-02",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed the cybersecurity risks specific to its AI systems — including adversarial attack?",
+    "category": "LL-08",
+    "core": true,
+    "related": [
+      "LL-08",
+      "SP-03",
+      "GV-N14"
+    ]
+  },
+  {
+    "question": "Does the organisation have mandatory incident reporting obligations for AI-related failures under NIS2 or equivalent frameworks?",
+    "category": "LL-08",
+    "core": true,
+    "related": [
+      "LL-08",
+      "LR-11",
+      "RE-04"
+    ]
+  },
+  {
+    "question": "Can the organisation take its AI systems offline quickly without causing cascading failure to dependent services?",
+    "category": "LL-08",
+    "core": true,
+    "related": [
+      "LL-08",
+      "CS-11",
+      "GQ-05"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed the concentration risk created by dependence on a single AI provider for essential services?",
+    "category": "LL-08",
+    "core": false,
+    "related": [
+      "LL-08",
+      "SP-11",
+      "SP-18"
+    ]
+  },
+  {
+    "question": "Does the organisation know its supply chain security obligations under applicable cybersecurity frameworks?",
+    "category": "LL-08",
+    "core": false,
+    "related": [
+      "LL-08",
+      "SP-18",
+      "AR-08"
+    ]
+  },
+  {
+    "question": "Are AI system failures that affect essential service operations reported to the relevant authority within required timeframes?",
+    "category": "LL-08",
+    "core": false,
+    "related": [
+      "LL-08",
+      "LR-11",
+      "CS-12"
+    ]
+  },
+  {
+    "question": "Has the organisation tested its business continuity plans for scenarios involving AI system failure?",
+    "category": "LL-08",
+    "core": false,
+    "related": [
+      "LL-08",
+      "CS-08",
+      "CS-11"
+    ]
+  },
+  {
+    "question": "Does the organisation monitor AI systems in critical service contexts for signs of adversarial manipulation — not just malfunction?",
+    "category": "LL-08",
+    "core": false,
+    "related": [
+      "LL-08",
+      "CS-01",
+      "CS-07"
+    ]
+  },
+  {
+    "question": "Is there a named individual responsible for the cybersecurity of AI systems used in essential services?",
+    "category": "LL-08",
+    "core": false,
+    "related": [
+      "LL-08",
+      "AR-01",
+      "AR-05"
+    ]
+  },
+  {
+    "question": "Does the board know what AI systems the organisation operates and what risks they present?",
+    "category": "LL-09",
+    "core": true,
+    "related": [
+      "LL-09",
+      "AR-06",
+      "AR-07"
+    ]
+  },
+  {
+    "question": "Has the board received information about AI governance that is sufficient to exercise meaningful oversight?",
+    "category": "LL-09",
+    "core": true,
+    "related": [
+      "LL-09",
+      "AR-06",
+      "AR-10"
+    ]
+  },
+  {
+    "question": "Does the organisation know that approving AI deployment without adequate risk assessment may breach director duties?",
+    "category": "LL-09",
+    "core": true,
+    "related": [
+      "LL-09",
+      "AR-06",
+      "LR-04"
+    ]
+  },
+  {
+    "question": "Are board minutes an accurate record of the AI governance questions asked and the answers received?",
+    "category": "LL-09",
+    "core": false,
+    "related": [
+      "LL-09",
+      "RE-07",
+      "GQ-03"
+    ]
+  },
+  {
+    "question": "Is there a named senior individual accountable for AI systems in each area of the business?",
+    "category": "LL-09",
+    "core": true,
+    "related": [
+      "LL-09",
+      "AR-01",
+      "GQ-04"
+    ]
+  },
+  {
+    "question": "Does the board receive regular management reporting on AI system performance and governance?",
+    "category": "LL-09",
+    "core": false,
+    "related": [
+      "LL-09",
+      "AR-07",
+      "CS-09"
+    ]
+  },
+  {
+    "question": "Has the organisation considered whether its AI governance arrangements meet the expectations of institutional investors and governance codes?",
+    "category": "LL-09",
+    "core": false,
+    "related": [
+      "LL-09",
+      "AR-10",
+      "LL-10"
+    ]
+  },
+  {
+    "question": "Does the board know that relying on management assurances without scrutiny does not constitute informed business judgement?",
+    "category": "LL-09",
+    "core": false,
+    "related": [
+      "LL-09",
+      "AR-06",
+      "AR-N01"
+    ]
+  },
+  {
+    "question": "Is there a gap between what the governance framework says about AI oversight and what the board actually receives?",
+    "category": "LL-09",
+    "core": true,
+    "related": [
+      "LL-09",
+      "AR-11",
+      "AR-12"
+    ]
+  },
+  {
+    "question": "Does the organisation operate in a sector with an individual accountability regime — and has AI governance been included within it?",
+    "category": "LL-09",
+    "core": false,
+    "related": [
+      "LL-09",
+      "AR-01",
+      "LL-07"
+    ]
+  },
+  {
+    "question": "Is the organisation publicly listed or does it make public statements that could affect investor decisions?",
+    "category": "LL-10",
+    "core": false,
+    "related": [
+      "LL-10",
+      "AR-06",
+      "LL-09"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed whether its AI systems represent a material risk that must be disclosed to investors?",
+    "category": "LL-10",
+    "core": true,
+    "related": [
+      "LL-10",
+      "AR-06",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Does the organisation know what AI washing is and whether any of its investor communications could be characterised as such?",
+    "category": "LL-10",
+    "core": true,
+    "related": [
+      "LL-10",
+      "SP-15",
+      "GV-N05"
+    ]
+  },
+  {
+    "question": "Are claims about AI capabilities made in investor communications grounded in documented evidence?",
+    "category": "LL-10",
+    "core": true,
+    "related": [
+      "LL-10",
+      "SP-17",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Does the board review AI-related disclosures before they are published?",
+    "category": "LL-10",
+    "core": false,
+    "related": [
+      "LL-10",
+      "AR-06",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "Would the organisation be able to demonstrate that investor communications about AI were accurate at the time they were made?",
+    "category": "LL-10",
+    "core": true,
+    "related": [
+      "LL-10",
+      "RE-07",
+      "SP-17"
+    ]
+  },
+  {
+    "question": "Does the organisation know that a material AI system failure may constitute inside information requiring prompt disclosure?",
+    "category": "LL-10",
+    "core": false,
+    "related": [
+      "LL-10",
+      "LR-11",
+      "CS-12"
+    ]
+  },
+  {
+    "question": "Has the organisation included AI-related risks in its required risk factor disclosures?",
+    "category": "LL-10",
+    "core": false,
+    "related": [
+      "LL-10",
+      "LR-03",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Does the organisation know that securities fraud liability can attach to individuals — not just the company?",
+    "category": "LL-10",
+    "core": false,
+    "related": [
+      "LL-10",
+      "AR-01",
+      "LR-04"
+    ]
+  },
+  {
+    "question": "Are internal records about AI system performance consistent with what the organisation tells investors about those systems?",
+    "category": "LL-10",
+    "core": true,
+    "related": [
+      "LL-10",
+      "RE-07",
+      "SP-17"
+    ]
+  },
+  {
+    "question": "Does the organisation know whether any of its AI systems are deployed in a regulated sector?",
+    "category": "LL-11",
+    "core": true,
+    "related": [
+      "LL-11",
+      "LR-13",
+      "SP-09"
+    ]
+  },
+  {
+    "question": "Has the organisation identified which sector-specific regulator has oversight of its AI systems?",
+    "category": "LL-11",
+    "core": true,
+    "related": [
+      "LL-11",
+      "LR-02",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Does the organisation understand that AI systems performing regulated functions must meet the standards of that sector — not just general AI regulation?",
+    "category": "LL-11",
+    "core": true,
+    "related": [
+      "LL-11",
+      "LR-03",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "In healthcare settings, do clinicians understand that professional accountability for clinical decisions remains with them — not the AI system?",
+    "category": "LL-11",
+    "core": true,
+    "related": [
+      "LL-11",
+      "AR-01",
+      "CS-13"
+    ]
+  },
+  {
+    "question": "Has AI used in medical functions been assessed as a medical device under applicable regulation?",
+    "category": "LL-11",
+    "core": false,
+    "related": [
+      "LL-11",
+      "LR-13",
+      "LL-05"
+    ]
+  },
+  {
+    "question": "Does the organisation have post-market surveillance in place for AI systems deployed in regulated sectors?",
+    "category": "LL-11",
+    "core": false,
+    "related": [
+      "LL-11",
+      "CS-01",
+      "CS-09"
+    ]
+  },
+  {
+    "question": "Are failures of AI systems in regulated sectors reported through the sector's mandatory reporting mechanisms?",
+    "category": "LL-11",
+    "core": false,
+    "related": [
+      "LL-11",
+      "LR-11",
+      "RE-04"
+    ]
+  },
+  {
+    "question": "Does the organisation know that sector regulators may have specific AI governance expectations beyond those in general AI regulation?",
+    "category": "LL-11",
+    "core": false,
+    "related": [
+      "LL-11",
+      "LR-02",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "Is technical documentation for AI systems in regulated sectors maintained to the standard the sector regulator requires?",
+    "category": "LL-11",
+    "core": false,
+    "related": [
+      "LL-11",
+      "RE-13",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "Has the organisation considered that AI failures in regulated sectors may simultaneously trigger multiple legal frameworks?",
+    "category": "LL-11",
+    "core": true,
+    "related": [
+      "LL-11",
+      "LR-04",
+      "GV-03"
+    ]
+  },
+  {
+    "question": "Does senior management understand the specific AI governance obligations that apply in the sectors the organisation operates in?",
+    "category": "LL-11",
+    "core": false,
+    "related": [
+      "LL-11",
+      "AR-07",
+      "AR-06"
+    ]
+  },
+  {
+    "question": "Does the organisation know which UK regulator has oversight of this system?",
+    "category": "JX-01",
+    "core": true,
+    "related": [
+      "JX-01",
+      "LR-02",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under UK GDPR for automated decision-making?",
+    "category": "JX-01",
+    "core": true,
+    "related": [
+      "JX-01",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "If the system operates in financial services, has the organisation assessed its obligations under the FCA Consumer Duty?",
+    "category": "JX-01",
+    "core": false,
+    "related": [
+      "JX-01",
+      "LR-07",
+      "LR-09"
+    ]
+  },
+  {
+    "question": "Has the organisation checked whether the system's outputs could constitute discrimination under the Equality Act 2010?",
+    "category": "JX-01",
+    "core": false,
+    "related": [
+      "JX-01",
+      "LR-03",
+      "SP-19"
+    ]
+  },
+  {
+    "question": "Is there a named senior manager accountable for this system under the SMCR or Companies Act?",
+    "category": "JX-01",
+    "core": false,
+    "related": [
+      "JX-01",
+      "AR-01",
+      "LL-09"
+    ]
+  },
+  {
+    "question": "Can the organisation explain a specific automated decision to an individual under UK GDPR Article 22 equivalent rights?",
+    "category": "JX-01",
+    "core": false,
+    "related": [
+      "JX-01",
+      "LR-01",
+      "SP-16"
+    ]
+  },
+  {
+    "question": "Has the organisation conducted a Data Protection Impact Assessment for this system?",
+    "category": "JX-01",
+    "core": true,
+    "related": [
+      "JX-01",
+      "LR-10",
+      "GV-N14"
+    ]
+  },
+  {
+    "question": "Does the board understand the AI governance risks and its obligations under the Companies Act?",
+    "category": "JX-01",
+    "core": false,
+    "related": [
+      "JX-01",
+      "AR-06",
+      "LL-09"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed CMA competition concerns if the system influences pricing or market behaviour?",
+    "category": "JX-01",
+    "core": false,
+    "related": [
+      "JX-01",
+      "LL-06",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "Is the organisation monitoring the UK government's AI regulatory developments that may affect this system?",
+    "category": "JX-01",
+    "core": false,
+    "related": [
+      "JX-01",
+      "LR-02",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "Has the organisation mapped which federal regulators have jurisdiction over this system?",
+    "category": "JX-02",
+    "core": true,
+    "related": [
+      "JX-02",
+      "LR-02",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "If the system influences credit decisions, has the organisation assessed its ECOA and CFPB adverse action obligations?",
+    "category": "JX-02",
+    "core": false,
+    "related": [
+      "JX-02",
+      "LR-07",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed FTC unfair and deceptive practices risk for this system?",
+    "category": "JX-02",
+    "core": true,
+    "related": [
+      "JX-02",
+      "LR-04",
+      "LR-09"
+    ]
+  },
+  {
+    "question": "If the system is used in employment decisions, has the organisation assessed EEOC discrimination obligations?",
+    "category": "JX-02",
+    "core": false,
+    "related": [
+      "JX-02",
+      "LR-03",
+      "SP-19"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed which state AI laws apply — Colorado, California, New York or others?",
+    "category": "JX-02",
+    "core": true,
+    "related": [
+      "JX-02",
+      "LR-02",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "If the system processes health data, has the organisation assessed HIPAA obligations?",
+    "category": "JX-02",
+    "core": false,
+    "related": [
+      "JX-02",
+      "LR-10",
+      "SP-04"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed SEC disclosure obligations if AI capabilities are material to investors?",
+    "category": "JX-02",
+    "core": false,
+    "related": [
+      "JX-02",
+      "LL-10",
+      "LR-11"
+    ]
+  },
+  {
+    "question": "Can the organisation provide specific adverse action explanations for AI-driven decisions as required by CFPB guidance?",
+    "category": "JX-02",
+    "core": false,
+    "related": [
+      "JX-02",
+      "SP-16",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed whether the system's outputs could constitute disparate impact discrimination under Title VII?",
+    "category": "JX-02",
+    "core": false,
+    "related": [
+      "JX-02",
+      "LR-03",
+      "GV-02"
+    ]
+  },
+  {
+    "question": "Is the organisation tracking the rapidly evolving US state AI legislation landscape?",
+    "category": "JX-02",
+    "core": false,
+    "related": [
+      "JX-02",
+      "LR-02",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "If the system provides algorithmic recommendations to users in China, has the organisation assessed its obligations under the Algorithmic Recommendation Regulation?",
+    "category": "JX-03",
+    "core": true,
+    "related": [
+      "JX-03",
+      "SP-15",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Does the system generate synthetic media or deep synthesis content that requires labelling under Chinese regulation?",
+    "category": "JX-03",
+    "core": false,
+    "related": [
+      "JX-03",
+      "SP-15",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "If the system is a generative AI service available to users in China, has the organisation completed the required security assessment?",
+    "category": "JX-03",
+    "core": true,
+    "related": [
+      "JX-03",
+      "LR-13",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under PIPL for personal data processed by this system?",
+    "category": "JX-03",
+    "core": true,
+    "related": [
+      "JX-03",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Does the system process data that must be stored within China under data localisation requirements?",
+    "category": "JX-03",
+    "core": false,
+    "related": [
+      "JX-03",
+      "SP-18",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed Cyberspace Administration of China registration or filing requirements for this system?",
+    "category": "JX-03",
+    "core": false,
+    "related": [
+      "JX-03",
+      "LR-02",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Can affected individuals request human review of decisions made about them under PIPL?",
+    "category": "JX-03",
+    "core": false,
+    "related": [
+      "JX-03",
+      "LR-01",
+      "CS-13"
+    ]
+  },
+  {
+    "question": "Does the system's content comply with Chinese content requirements including applicable value standards?",
+    "category": "JX-03",
+    "core": false,
+    "related": [
+      "JX-03",
+      "LR-03",
+      "SP-14"
+    ]
+  },
+  {
+    "question": "Is the organisation aware of the developing comprehensive AI Law and its likely implications for this system?",
+    "category": "JX-03",
+    "core": false,
+    "related": [
+      "JX-03",
+      "LR-02",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed whether the system's cross-border data transfers comply with Chinese data export rules?",
+    "category": "JX-03",
+    "core": false,
+    "related": [
+      "JX-03",
+      "LR-10",
+      "SP-18"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under PIPEDA or applicable provincial privacy law for this system?",
+    "category": "JX-04",
+    "core": true,
+    "related": [
+      "JX-04",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "If the system processes data of Quebec residents, has the organisation assessed its obligations under Law 25?",
+    "category": "JX-04",
+    "core": true,
+    "related": [
+      "JX-04",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Can affected Quebec residents request human review of significant automated decisions about them?",
+    "category": "JX-04",
+    "core": false,
+    "related": [
+      "JX-04",
+      "LR-01",
+      "CS-13"
+    ]
+  },
+  {
+    "question": "Has a designated individual been identified as accountable for privacy compliance for this system?",
+    "category": "JX-04",
+    "core": false,
+    "related": [
+      "JX-04",
+      "AR-01",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "If the system is operated by a federal institution, has it been assessed under the Treasury Board Directive on Automated Decision-Making?",
+    "category": "JX-04",
+    "core": false,
+    "related": [
+      "JX-04",
+      "LR-13",
+      "AR-03"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed Competition Bureau concerns if the system influences pricing or market conduct?",
+    "category": "JX-04",
+    "core": false,
+    "related": [
+      "JX-04",
+      "LL-06",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "Is the organisation monitoring the anticipated new federal AI legislation following AIDA's collapse?",
+    "category": "JX-04",
+    "core": false,
+    "related": [
+      "JX-04",
+      "LR-02",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "Can the organisation provide meaningful explanation of automated decisions to affected individuals as required under Law 25?",
+    "category": "JX-04",
+    "core": false,
+    "related": [
+      "JX-04",
+      "SP-16",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed OSFI model risk management obligations if the system is used in financial services?",
+    "category": "JX-04",
+    "core": false,
+    "related": [
+      "JX-04",
+      "LR-07",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Does the organisation have a Privacy Impact Assessment for high-risk automated processing?",
+    "category": "JX-04",
+    "core": false,
+    "related": [
+      "JX-04",
+      "GV-N14",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under the LGPD for automated decision-making affecting individuals in Brazil?",
+    "category": "JX-05",
+    "core": true,
+    "related": [
+      "JX-05",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation classified this system under Brazil's AI Law risk framework?",
+    "category": "JX-05",
+    "core": true,
+    "related": [
+      "JX-05",
+      "LR-13",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "If classified as high-risk under Brazil's AI Law, has the organisation completed the required conformity assessment?",
+    "category": "JX-05",
+    "core": false,
+    "related": [
+      "JX-05",
+      "LR-13",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Can individuals affected by automated decisions request human review under LGPD?",
+    "category": "JX-05",
+    "core": false,
+    "related": [
+      "JX-05",
+      "LR-01",
+      "CS-13"
+    ]
+  },
+  {
+    "question": "Has the ANPD been notified of high-risk automated processing activities as required?",
+    "category": "JX-05",
+    "core": false,
+    "related": [
+      "JX-05",
+      "LR-11",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed Consumer Defense Code obligations for consumer-facing AI applications?",
+    "category": "JX-05",
+    "core": false,
+    "related": [
+      "JX-05",
+      "LR-09",
+      "LR-04"
+    ]
+  },
+  {
+    "question": "If the system operates in financial services in Brazil, has the organisation assessed BCB model governance requirements?",
+    "category": "JX-05",
+    "core": false,
+    "related": [
+      "JX-05",
+      "LR-07",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Does the organisation have a named Data Protection Officer as required under the LGPD?",
+    "category": "JX-05",
+    "core": false,
+    "related": [
+      "JX-05",
+      "AR-01",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed whether the system's outputs could constitute discrimination under Brazilian law?",
+    "category": "JX-05",
+    "core": false,
+    "related": [
+      "JX-05",
+      "LR-03",
+      "SP-19"
+    ]
+  },
+  {
+    "question": "Can the organisation demonstrate LGPD accountability through documented governance records?",
+    "category": "JX-05",
+    "core": true,
+    "related": [
+      "JX-05",
+      "AR-01",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under the PDPA for personal data processed by this system?",
+    "category": "JX-06",
+    "core": true,
+    "related": [
+      "JX-06",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "If the system operates in financial services in Singapore, has the organisation assessed MAS FEAT principles compliance?",
+    "category": "JX-06",
+    "core": true,
+    "related": [
+      "JX-06",
+      "LR-07",
+      "SP-19"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed MAS generative AI guidance if the system uses generative AI in financial services?",
+    "category": "JX-06",
+    "core": false,
+    "related": [
+      "JX-06",
+      "LR-07",
+      "AR-03"
+    ]
+  },
+  {
+    "question": "Has the organisation considered AI Verify participation to demonstrate governance maturity?",
+    "category": "JX-06",
+    "core": false,
+    "related": [
+      "JX-06",
+      "GV-N10",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Is there a named individual accountable for this system's governance as expected under MAS guidance?",
+    "category": "JX-06",
+    "core": false,
+    "related": [
+      "JX-06",
+      "AR-01",
+      "LL-09"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed fairness across demographic groups as required by MAS FEAT principles?",
+    "category": "JX-06",
+    "core": false,
+    "related": [
+      "JX-06",
+      "SP-19",
+      "GV-02"
+    ]
+  },
+  {
+    "question": "Are customers informed when AI is used in decisions affecting them, as required by MAS transparency expectations?",
+    "category": "JX-06",
+    "core": false,
+    "related": [
+      "JX-06",
+      "SP-15",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Does the organisation maintain records of AI model development, validation and performance as expected by MAS?",
+    "category": "JX-06",
+    "core": false,
+    "related": [
+      "JX-06",
+      "RE-13",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "Has the organisation notified the PDPC of this system's data processing activities where required?",
+    "category": "JX-06",
+    "core": false,
+    "related": [
+      "JX-06",
+      "LR-10",
+      "LR-11"
+    ]
+  },
+  {
+    "question": "Does the organisation's PDPA Data Protection Officer have oversight of this system?",
+    "category": "JX-06",
+    "core": false,
+    "related": [
+      "JX-06",
+      "AR-01",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under the Act on Protection of Personal Information for this system?",
+    "category": "JX-07",
+    "core": true,
+    "related": [
+      "JX-07",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation reviewed METI AI Guidelines for Business in relation to this system?",
+    "category": "JX-07",
+    "core": false,
+    "related": [
+      "JX-07",
+      "LR-02",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "If the system operates in financial services in Japan, has the organisation assessed FSA supervisory guidance?",
+    "category": "JX-07",
+    "core": false,
+    "related": [
+      "JX-07",
+      "LR-07",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed Japan Fair Trade Commission concerns if the system influences pricing or market behaviour?",
+    "category": "JX-07",
+    "core": false,
+    "related": [
+      "JX-07",
+      "LL-06",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "Does the system involve cross-border data transfers that require assessment under APPI third-party provision rules?",
+    "category": "JX-07",
+    "core": false,
+    "related": [
+      "JX-07",
+      "LR-10",
+      "SP-18"
+    ]
+  },
+  {
+    "question": "Are individuals informed about how their personal information is used in automated processing as required by APPI?",
+    "category": "JX-07",
+    "core": false,
+    "related": [
+      "JX-07",
+      "SP-15",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Is the organisation monitoring the implementation regulations expected under Japan's AI Promotion Act?",
+    "category": "JX-07",
+    "core": false,
+    "related": [
+      "JX-07",
+      "LR-02",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed the Act against Misleading Representations if the system makes AI-related marketing claims?",
+    "category": "JX-07",
+    "core": false,
+    "related": [
+      "JX-07",
+      "LR-09",
+      "SP-15"
+    ]
+  },
+  {
+    "question": "Does the organisation maintain records of personal information processing as required under APPI accountability obligations?",
+    "category": "JX-07",
+    "core": false,
+    "related": [
+      "JX-07",
+      "RE-07",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Has the organisation notified the Personal Information Protection Commission of required processing activities?",
+    "category": "JX-07",
+    "core": false,
+    "related": [
+      "JX-07",
+      "LR-11",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed whether this system falls within the high-impact categories of South Korea's AI Basic Act?",
+    "category": "JX-08",
+    "core": true,
+    "related": [
+      "JX-08",
+      "LR-13",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under PIPA for automated decision-making affecting individuals in South Korea?",
+    "category": "JX-08",
+    "core": true,
+    "related": [
+      "JX-08",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Is the organisation preparing for the full effect of the AI Basic Act obligations taking effect in 2026?",
+    "category": "JX-08",
+    "core": true,
+    "related": [
+      "JX-08",
+      "LR-02",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Can individuals subject to significant automated decisions request human review under PIPA?",
+    "category": "JX-08",
+    "core": false,
+    "related": [
+      "JX-08",
+      "LR-01",
+      "CS-13"
+    ]
+  },
+  {
+    "question": "Does the system generate AI content that requires disclosure under the AI Basic Act?",
+    "category": "JX-08",
+    "core": false,
+    "related": [
+      "JX-08",
+      "SP-15",
+      "LR-03"
+    ]
+  },
+  {
+    "question": "If the system operates in financial services in South Korea, has the organisation assessed FSC and FSS guidance?",
+    "category": "JX-08",
+    "core": false,
+    "related": [
+      "JX-08",
+      "LR-07",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed Korea Fair Trade Commission concerns for algorithmic pricing or market conduct?",
+    "category": "JX-08",
+    "core": false,
+    "related": [
+      "JX-08",
+      "LL-06",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "Has the organisation notified the Personal Information Protection Commission of high-risk automated processing?",
+    "category": "JX-08",
+    "core": false,
+    "related": [
+      "JX-08",
+      "LR-10",
+      "LR-11"
+    ]
+  },
+  {
+    "question": "Is there a pre-deployment risk assessment documenting the system's risk classification under the AI Basic Act?",
+    "category": "JX-08",
+    "core": false,
+    "related": [
+      "JX-08",
+      "GV-N14",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Does the organisation have a documented accountability structure meeting the AI Basic Act's requirements?",
+    "category": "JX-08",
+    "core": false,
+    "related": [
+      "JX-08",
+      "AR-01",
+      "RE-07"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under the Digital Personal Data Protection Act for this system?",
+    "category": "JX-09",
+    "core": true,
+    "related": [
+      "JX-09",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation identified the Data Fiduciary accountable for this system under the DPDPA?",
+    "category": "JX-09",
+    "core": true,
+    "related": [
+      "JX-09",
+      "AR-01",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "If the system operates in financial services in India, has the organisation assessed RBI model risk management requirements?",
+    "category": "JX-09",
+    "core": false,
+    "related": [
+      "JX-09",
+      "LR-07",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed SEBI obligations if the system is used in investment management or algorithmic trading?",
+    "category": "JX-09",
+    "core": false,
+    "related": [
+      "JX-09",
+      "LR-07",
+      "LL-10"
+    ]
+  },
+  {
+    "question": "Does the organisation have valid consent or another lawful basis for personal data processing under the DPDPA?",
+    "category": "JX-09",
+    "core": false,
+    "related": [
+      "JX-09",
+      "LR-10",
+      "SP-04"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under the Competition Act for algorithmic pricing or market conduct?",
+    "category": "JX-09",
+    "core": false,
+    "related": [
+      "JX-09",
+      "LL-06",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "Is the organisation monitoring the development of DPDPA implementation regulations?",
+    "category": "JX-09",
+    "core": false,
+    "related": [
+      "JX-09",
+      "LR-02",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Has a Data Protection Officer been designated for this system as required for significant fiduciaries under the DPDPA?",
+    "category": "JX-09",
+    "core": false,
+    "related": [
+      "JX-09",
+      "AR-01",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed fairness implications of this system across India's socioeconomic and demographic diversity?",
+    "category": "JX-09",
+    "core": false,
+    "related": [
+      "JX-09",
+      "SP-19",
+      "GV-02"
+    ]
+  },
+  {
+    "question": "If the system processes health data, has the organisation assessed obligations under healthcare sector regulation?",
+    "category": "JX-09",
+    "core": false,
+    "related": [
+      "JX-09",
+      "LL-11",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under the Privacy Act for automated decision-making affecting Australians?",
+    "category": "JX-10",
+    "core": true,
+    "related": [
+      "JX-10",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed Australian Consumer Law obligations for this system?",
+    "category": "JX-10",
+    "core": true,
+    "related": [
+      "JX-10",
+      "LR-09",
+      "LR-04"
+    ]
+  },
+  {
+    "question": "If the system operates in financial services in Australia, has the organisation assessed ASIC and APRA expectations?",
+    "category": "JX-10",
+    "core": true,
+    "related": [
+      "JX-10",
+      "LR-07",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Does the system make any AI-related claims that could constitute misleading conduct under the Australian Consumer Law?",
+    "category": "JX-10",
+    "core": false,
+    "related": [
+      "JX-10",
+      "LR-09",
+      "SP-15"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed ACCC competition concerns if the system influences pricing or digital market conduct?",
+    "category": "JX-10",
+    "core": false,
+    "related": [
+      "JX-10",
+      "LL-06",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "If the system provides financial advice, has the organisation assessed ASIC obligations for AI in financial advice?",
+    "category": "JX-10",
+    "core": false,
+    "related": [
+      "JX-10",
+      "LR-07",
+      "AR-03"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed Corporations Act director duty obligations for board approval of this system?",
+    "category": "JX-10",
+    "core": false,
+    "related": [
+      "JX-10",
+      "AR-06",
+      "LL-09"
+    ]
+  },
+  {
+    "question": "Is the organisation monitoring the government's proposed mandatory AI guardrails consultation?",
+    "category": "JX-10",
+    "core": false,
+    "related": [
+      "JX-10",
+      "LR-02",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed the system's outputs for discrimination under Australian equality legislation?",
+    "category": "JX-10",
+    "core": false,
+    "related": [
+      "JX-10",
+      "LR-03",
+      "SP-19"
+    ]
+  },
+  {
+    "question": "Can the organisation demonstrate its AI governance to the OAIC if an investigation were initiated?",
+    "category": "JX-10",
+    "core": false,
+    "related": [
+      "JX-10",
+      "LR-06",
+      "RE-12"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under POPIA for automated decision-making affecting individuals in South Africa?",
+    "category": "JX-11",
+    "core": true,
+    "related": [
+      "JX-11",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation registered as a responsible party with the Information Regulator as required under POPIA?",
+    "category": "JX-11",
+    "core": true,
+    "related": [
+      "JX-11",
+      "LR-02",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Can individuals subject to automated decisions request human review under POPIA Section 71?",
+    "category": "JX-11",
+    "core": true,
+    "related": [
+      "JX-11",
+      "LR-01",
+      "CS-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed constitutional rights implications — equality, dignity, privacy — for this system's outputs?",
+    "category": "JX-11",
+    "core": false,
+    "related": [
+      "JX-11",
+      "LR-03",
+      "SP-19"
+    ]
+  },
+  {
+    "question": "If the system is used in financial services in South Africa, has the organisation assessed FSCA conduct obligations?",
+    "category": "JX-11",
+    "core": false,
+    "related": [
+      "JX-11",
+      "LR-07",
+      "LR-09"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed obligations under the Promotion of Administrative Justice Act for public sector automated decisions?",
+    "category": "JX-11",
+    "core": false,
+    "related": [
+      "JX-11",
+      "LR-01",
+      "LR-08"
+    ]
+  },
+  {
+    "question": "Has a designated Information Officer been appointed as required under POPIA?",
+    "category": "JX-11",
+    "core": false,
+    "related": [
+      "JX-11",
+      "AR-01",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed Companies Act director duty obligations for the deployment of this system?",
+    "category": "JX-11",
+    "core": false,
+    "related": [
+      "JX-11",
+      "AR-06",
+      "LL-09"
+    ]
+  },
+  {
+    "question": "Does the organisation maintain records demonstrating POPIA accountability that would satisfy the Information Regulator?",
+    "category": "JX-11",
+    "core": false,
+    "related": [
+      "JX-11",
+      "RE-07",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed Competition Commission concerns for algorithmic pricing or market conduct?",
+    "category": "JX-11",
+    "core": false,
+    "related": [
+      "JX-11",
+      "LL-06",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under the Nigeria Data Protection Act for this system?",
+    "category": "JX-12",
+    "core": true,
+    "related": [
+      "JX-12",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation registered with the Nigeria Data Protection Commission as required?",
+    "category": "JX-12",
+    "core": true,
+    "related": [
+      "JX-12",
+      "LR-02",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation completed a Data Protection Impact Assessment for this automated decision-making system?",
+    "category": "JX-12",
+    "core": true,
+    "related": [
+      "JX-12",
+      "GV-N14",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Can individuals subject to automated decisions request human review under the NDPA?",
+    "category": "JX-12",
+    "core": false,
+    "related": [
+      "JX-12",
+      "LR-01",
+      "CS-13"
+    ]
+  },
+  {
+    "question": "Has a Data Protection Officer been designated for this system as required under the NDPA?",
+    "category": "JX-12",
+    "core": false,
+    "related": [
+      "JX-12",
+      "AR-01",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "If the system operates in financial services in Nigeria, has the organisation assessed CBN model risk requirements?",
+    "category": "JX-12",
+    "core": false,
+    "related": [
+      "JX-12",
+      "LR-07",
+      "RE-13"
+    ]
+  },
+  {
+    "question": "Does the organisation maintain records of processing activities demonstrable to the NDPC on demand?",
+    "category": "JX-12",
+    "core": false,
+    "related": [
+      "JX-12",
+      "RE-07",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed FCCPC consumer protection obligations for consumer-facing AI applications?",
+    "category": "JX-12",
+    "core": false,
+    "related": [
+      "JX-12",
+      "LR-09",
+      "LR-04"
+    ]
+  },
+  {
+    "question": "Are individuals informed about automated decision-making and the logic applied as required under the NDPA?",
+    "category": "JX-12",
+    "core": false,
+    "related": [
+      "JX-12",
+      "SP-15",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Is the organisation aware of the NDPC's active enforcement posture and prepared to respond to compliance enquiries?",
+    "category": "JX-12",
+    "core": false,
+    "related": [
+      "JX-12",
+      "LR-06",
+      "LR-07"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed its obligations under the Data Protection Act 2019 for automated decision-making affecting Kenyans?",
+    "category": "JX-13",
+    "core": true,
+    "related": [
+      "JX-13",
+      "LR-10",
+      "LR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation registered with the Office of the Data Protection Commissioner as required?",
+    "category": "JX-13",
+    "core": true,
+    "related": [
+      "JX-13",
+      "LR-02",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Has a Data Protection Officer been designated for this system as required under Kenya's Data Protection Act?",
+    "category": "JX-13",
+    "core": false,
+    "related": [
+      "JX-13",
+      "AR-01",
+      "LR-10"
+    ]
+  },
+  {
+    "question": "Can individuals subject to automated decisions request explanation and review under Kenya's Data Protection Act?",
+    "category": "JX-13",
+    "core": false,
+    "related": [
+      "JX-13",
+      "LR-01",
+      "CS-13"
+    ]
+  },
+  {
+    "question": "If the system operates in financial services in Kenya, has the organisation assessed CBK and CMA obligations?",
+    "category": "JX-13",
+    "core": false,
+    "related": [
+      "JX-13",
+      "LR-07",
+      "LR-02"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed obligations under Kenya's Consumer Protection Act for consumer-facing AI applications?",
+    "category": "JX-13",
+    "core": false,
+    "related": [
+      "JX-13",
+      "LR-09",
+      "LR-04"
+    ]
+  },
+  {
+    "question": "Is the organisation monitoring Kenya's Draft AI Code of Practice and anticipated mandatory requirements?",
+    "category": "JX-13",
+    "core": false,
+    "related": [
+      "JX-13",
+      "LR-02",
+      "LR-13"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed the system's fairness implications under Kenya's constitutional equality provisions?",
+    "category": "JX-13",
+    "core": false,
+    "related": [
+      "JX-13",
+      "LR-03",
+      "SP-19"
+    ]
+  },
+  {
+    "question": "Does the organisation maintain processing records demonstrable to the ODPC on demand?",
+    "category": "JX-13",
+    "core": false,
+    "related": [
+      "JX-13",
+      "RE-07",
+      "AR-01"
+    ]
+  },
+  {
+    "question": "Has the organisation assessed Communications Authority obligations if the system operates in telecommunications or digital services?",
+    "category": "JX-13",
+    "core": false,
+    "related": [
+      "JX-13",
+      "LR-02",
+      "LL-11"
+    ]
+  }
+]
