@@ -53,6 +53,7 @@ function showCard() {
 // ── RESULTS ────────────────────────────────────────────────
 
 function renderResults(results) {
+  setSchema(schemaForResults(results));
   if (results.length === 0) {
     resultsPanel.innerHTML = `<p id="no-results">No cards found. Try a different term.</p>`;
     return;
@@ -80,6 +81,7 @@ function renderResults(results) {
 function openCard(code) {
   const card = cardByCode(code, allCards);
   if (!card) return;
+  setSchema(schemaForCard(card));
 
   const relatedLinks = (card.related || []).map(relCode => {
     const rel = cardByCode(relCode, allCards);
@@ -176,6 +178,59 @@ function renderMarkdown(md) {
 }
 
 
+// ── SCHEMA ─────────────────────────────────────────────────
+
+function setSchema(obj) {
+  let el = document.getElementById("dynamic-schema");
+  if (!el) {
+    el = document.createElement("script");
+    el.id = "dynamic-schema";
+    el.type = "application/ld+json";
+    document.head.appendChild(el);
+  }
+  el.textContent = JSON.stringify(obj);
+}
+
+function schemaForResults(results) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SearchResultsPage",
+    "name": "AI Governance Atlas Search",
+    "url": window.location.href,
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": results.slice(0, 5).map((card, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": card.title,
+        "description": card.description || "",
+        "url": `https://russell-parrott.github.io/ai-governance-reference/search.html?search=${encodeURIComponent(titleSlug(card))}`
+      }))
+    }
+  };
+}
+
+function schemaForCard(card) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": card.title,
+    "description": card.description || "",
+    "identifier": card.code,
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "AI Governance Atlas",
+      "url": "https://russell-parrott.github.io/ai-governance-reference/"
+    },
+    "url": `https://russell-parrott.github.io/ai-governance-reference/search.html?search=${encodeURIComponent(titleSlug(card))}`
+  };
+}
+
+function titleSlug(card) {
+  return card.code.toLowerCase() + "-" +
+    card.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
 // ── BACK ───────────────────────────────────────────────────
 
 backButton.addEventListener("click", () => showResults());
@@ -217,7 +272,7 @@ function renderCardQuestion(card) {
   if (existing) existing.remove();
   const div = document.createElement("div");
   div.id = "card-question";
-  div.innerHTML = `<h3 id="card-question-label">Consider</h3><p>${q.question}</p>`;
+  div.innerHTML = `<span id="card-question-label">Consider</span><p>${q.question}</p>`;
   cardContent.appendChild(div);
 }
 
