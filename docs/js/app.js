@@ -84,6 +84,7 @@ function openCard(code) {
   if (!card) return;
   setSchema(schemaForCard(card));
   setCanonical(`https://russell-parrott.github.io/ai-governance-reference/search.html?search=${encodeURIComponent(titleSlug(card))}`);
+  setMeta(card);
 
   const relatedLinks = (card.related || []).map(relCode => {
     const rel = cardByCode(relCode, allCards);
@@ -182,6 +183,42 @@ function renderMarkdown(md) {
 
 // ── SCHEMA ─────────────────────────────────────────────────
 
+function setMeta(card) {
+  const BASE = "https://russell-parrott.github.io/ai-governance-reference/";
+  const slug = titleSlug(card);
+  const url  = `${BASE}/search.html?search=${encodeURIComponent(slug)}`;
+  const raw  = card.description || "";
+  const desc = raw.length > 160 ? raw.slice(0, 157).replace(/\s\S+$/, "") + "..." : raw;
+  const title = `${card.code} ${card.title} | AI Governance Atlas`;
+  const image = `${BASE}/img/og-image.png`;
+
+  // Title
+  document.title = title;
+
+  // Helper: get or create a meta tag
+  function meta(selector, attr, value) {
+    let el = document.querySelector(selector);
+    if (!el) {
+      el = document.createElement("meta");
+      const [attrName, attrVal] = attr.split("=");
+      el.setAttribute(attrName, attrVal.replace(/"/g, ""));
+      document.head.appendChild(el);
+    }
+    el.setAttribute("content", value);
+  }
+
+  meta(`meta[name="description"]`,          `name="description"`,          desc);
+  meta(`meta[property="og:type"]`,           `property="og:type"`,          "article");
+  meta(`meta[property="og:title"]`,          `property="og:title"`,         title);
+  meta(`meta[property="og:description"]`,    `property="og:description"`,   desc);
+  meta(`meta[property="og:url"]`,            `property="og:url"`,           url);
+  meta(`meta[property="og:image"]`,          `property="og:image"`,         image);
+  meta(`meta[name="twitter:card"]`,          `name="twitter:card"`,         "summary_large_image");
+  meta(`meta[name="twitter:title"]`,         `name="twitter:title"`,        title);
+  meta(`meta[name="twitter:description"]`,   `name="twitter:description"`,  desc);
+  meta(`meta[name="twitter:image"]`,         `name="twitter:image"`,        image);
+}
+
 function setCanonical(url) {
   let el = document.querySelector("link[rel='canonical']");
   if (!el) {
@@ -207,7 +244,7 @@ function schemaForResults(results) {
   return {
     "@context": "https://schema.org",
     "@type": "SearchResultsPage",
-    "name": "AI Governance Atlas Search",
+    "name": "AI Governance Reference Search",
     "url": window.location.href,
     "mainEntity": {
       "@type": "ItemList",
@@ -234,7 +271,7 @@ function schemaForCard(card) {
       "name": "AI Governance Reference",
       "url": "https://russell-parrott.github.io/ai-governance-reference/"
     },
-    "url": `https://russell-parrott.github.io/ai-governance-reference//search.html?search=${encodeURIComponent(titleSlug(card))}`
+    "url": `https://russell-parrott.github.io/ai-governance-reference/search.html?search=${encodeURIComponent(titleSlug(card))}`
   };
 }
 
