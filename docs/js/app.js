@@ -54,7 +54,7 @@ function showCard() {
 
 function renderResults(results) {
   setSchema(schemaForResults(results));
-  setCanonical(`https://russell-parrott.github.io/ai-governance-reference/search.html?search=${encodeURIComponent(searchInput.value.trim())}`);
+  setCanonical(`https://russell-parrott.github.io/AI-Governance-Reference/search.html?search=${encodeURIComponent(searchInput.value.trim())}`);
   if (results.length === 0) {
     resultsPanel.innerHTML = `<p id="no-results">No cards found. Try a different term.</p>`;
     return;
@@ -83,7 +83,9 @@ function openCard(code) {
   const card = cardByCode(code, allCards);
   if (!card) return;
   setSchema(schemaForCard(card));
-  setCanonical(`https://russell-parrott.github.io/ai-governance-reference/search.html?search=${encodeURIComponent(titleSlug(card))}`);
+  const cardUrl = `${window.location.pathname}?search=${encodeURIComponent(titleSlug(card))}`;
+  history.pushState({ code: card.code }, card.title, cardUrl);
+  setCanonical(`https://russell-parrott.github.io/AI-Governance-Reference/search.html?search=${encodeURIComponent(titleSlug(card))}`);
   setMeta(card);
 
   const relatedLinks = (card.related || []).map(relCode => {
@@ -184,12 +186,12 @@ function renderMarkdown(md) {
 // ── SCHEMA ─────────────────────────────────────────────────
 
 function setMeta(card) {
-  const BASE = "https://russell-parrott.github.io/ai-governance-reference/";
+  const BASE = "https://russell-parrott.github.io/AI-Governance-Reference";
   const slug = titleSlug(card);
   const url  = `${BASE}/search.html?search=${encodeURIComponent(slug)}`;
   const raw  = card.description || "";
   const desc = raw.length > 160 ? raw.slice(0, 157).replace(/\s\S+$/, "") + "..." : raw;
-  const title = `${card.code} ${card.title} | AI Governance Atlas`;
+  const title = `${card.code} ${card.title} | AI Governance Reference`;
   const image = `${BASE}/img/og-image.png`;
 
   // Title
@@ -253,7 +255,7 @@ function schemaForResults(results) {
         "position": i + 1,
         "name": card.title,
         "description": card.description || "",
-        "url": `https://russell-parrott.github.io/ai-governance-reference/search.html?search=${encodeURIComponent(titleSlug(card))}`
+        "url": `https://russell-parrott.github.io/AI-Governance-Reference/search.html?search=${encodeURIComponent(titleSlug(card))}`
       }))
     }
   };
@@ -269,9 +271,9 @@ function schemaForCard(card) {
     "inDefinedTermSet": {
       "@type": "DefinedTermSet",
       "name": "AI Governance Reference",
-      "url": "https://russell-parrott.github.io/ai-governance-reference/"
+      "url": "https://russell-parrott.github.io/AI-Governance-Reference"
     },
-    "url": `https://russell-parrott.github.io/ai-governance-reference/search.html?search=${encodeURIComponent(titleSlug(card))}`
+    "url": `https://russell-parrott.github.io/AI-Governance-Reference/search.html?search=${encodeURIComponent(titleSlug(card))}`
   };
 }
 
@@ -282,7 +284,30 @@ function titleSlug(card) {
 
 // ── BACK ───────────────────────────────────────────────────
 
-backButton.addEventListener("click", () => showResults());
+backButton.addEventListener("click", () => {
+  history.back();
+});
+
+window.addEventListener("popstate", () => {
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get("search");
+  if (!q) {
+    renderEmptyQuestion();
+    showEmpty();
+    return;
+  }
+  // Try exact slug match first, then code match, then search results
+  const bySlug = allCards.find(c => titleSlug(c) === q);
+  const byCode = allCards.find(c => c.code.toLowerCase() === q.toLowerCase());
+  if (bySlug || byCode) {
+    openCard((bySlug || byCode).code);
+  } else {
+    searchInput.value = q;
+    const results = searchCards(q, allCards);
+    renderResults(results);
+    showResults();
+  }
+});
 
 // ── QUESTIONS ──────────────────────────────────────────────
 
