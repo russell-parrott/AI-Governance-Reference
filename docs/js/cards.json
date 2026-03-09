@@ -4948,5 +4948,46 @@
       "RE-13"
     ],
     "file": "SP-25-System-Architecture.md"
+  },
+  {
+    "code": "JX-14",
+    "section": "Jurisdictions",
+    "title": "European Union",
+    "description": "The EU AI Act and GDPR together form the most comprehensive binding AI governance framework in the world, with extraterritorial reach that makes them the de facto global baseline. High-risk AI systems face mandatory conformity assessment, logging, human oversight and documentation obligations.",
+    "keywords": [
+      "eu ai act",
+      "european union",
+      "gdpr",
+      "artificial intelligence act",
+      "high risk ai",
+      "conformity assessment",
+      "dsa",
+      "dma",
+      "product liability directive",
+      "ai liability directive",
+      "europe ai regulation",
+      "brussels",
+      "data protection",
+      "article 22",
+      "eu regulation",
+      "extraterritorial",
+      "eu member states",
+      "european commission",
+      "risk classification eu",
+      "ce marking ai"
+    ],
+    "related": [
+      "LL-01",
+      "LL-02",
+      "LR-13",
+      "RE-13",
+      "AR-01",
+      "SP-16",
+      "AR-03",
+      "LR-14",
+      "LR-15",
+      "JX-00"
+    ],
+    "file": "JX-14-European-Union.md"
   }
 ]
