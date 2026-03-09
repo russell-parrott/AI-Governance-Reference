@@ -15,8 +15,14 @@ backButton.addEventListener("click", () => history.back());
 // ── MARKDOWN ───────────────────────────────────────────────
 
 function renderMarkdown(md) {
+  // Inline formatting: bold and → CODE (Title) as card links
   function inlineFormat(text) {
-    return text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    return text
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/→\s*([A-Z]{2,3}-[A-Z0-9-]+)\s*\(([^)]+)\)/g,
+        (_, code, title) =>
+          `<a href="card.html?code=${encodeURIComponent(code)}" class="card-ref">→ ${code} (${title})</a>`
+      );
   }
 
   function renderTable(block) {
@@ -41,6 +47,16 @@ function renderMarkdown(md) {
     return `<ul>${items}</ul>`;
   }
 
+  function renderArrowList(block) {
+    const items = block.trim().split("\n")
+      .filter(l => l.trim())
+      .map(l => {
+        const content = l.replace(/^→\s*/, "").trim();
+        return `<li class="arrow-item">${inlineFormat(content)}</li>`;
+      }).join("\n");
+    return `<ul class="arrow-list">${items}</ul>`;
+  }
+
   return md.split(/\n\n+/).map(block => {
     const t = block.trim();
     if (!t) return "";
@@ -57,15 +73,18 @@ function renderMarkdown(md) {
     if (t.includes("|") && t.split("\n").every(l => l.includes("|")))
       return renderTable(t);
     if (/^[-*]\s+/.test(t)) return renderList(t);
+    if (t.split("\n").every(l => !l.trim() || l.trim().startsWith("→")))
+      return renderArrowList(t);
     if (t.startsWith("<"))  return t;
     return `<p>${inlineFormat(t)}</p>`;
   }).join("\n");
 }
 
+
 // ── META & SCHEMA ──────────────────────────────────────────
 
 function setMeta(card) {
-  const BASE  = "https://russell-parrott.github.io/AI-Governance-Reference";
+  const BASE  = "https://aigovernanceatlas.com";
   const url   = `${BASE}/card.html?code=${encodeURIComponent(card.code)}`;
   const raw   = card.description || "";
   const desc  = raw.length > 160 ? raw.slice(0, 157).replace(/\s\S+$/, "") + "..." : raw;

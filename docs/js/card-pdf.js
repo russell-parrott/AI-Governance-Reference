@@ -113,12 +113,23 @@ function parseMarkdown(md) {
     if (/^[-*]\s+/.test(t)) {
       const items = t.split("\n").filter(l => /^[-*]\s+/.test(l.trim())).map(l => {
         const content = l.replace(/^[-*]\s+/, "").trim();
-        // Detect **bold label** pattern
         const match = content.match(/^\*\*(.+?)\*\*\s*[—–-]\s*(.+)/);
         if (match) return { label: match[1], body: match[2] };
         return { label: null, body: content.replace(/\*\*(.+?)\*\*/g, "$1") };
       });
       blocks.push({ type: "list", items });
+      continue;
+    }
+
+    // Arrow list: → CODE (Title) — desc
+    if (t.split("\n").every(l => !l.trim() || l.trim().startsWith("→"))) {
+      const items = t.split("\n").filter(l => l.trim()).map(l => {
+        const raw = l.replace(/^→\s*/, "").trim();
+        const match = raw.match(/^([A-Z]{2,3}-[A-Z0-9-]+)\s*\(([^)]+)\)\s*[—–-]?\s*(.*)/);
+        if (match) return { code: match[1], title: match[2], body: match[3] || "" };
+        return { code: null, title: null, body: raw.replace(/\*\*(.+?)\*\*/g, "$1") };
+      });
+      blocks.push({ type: "arrowlist", items });
       continue;
     }
 
@@ -198,14 +209,15 @@ function renderHeader(ctx, card) {
 
 function renderBlock(ctx, block) {
   switch (block.type) {
-    case "rule":   return renderRule(ctx);
-    case "intro":  return renderIntro(ctx, block);
-    case "h2":     return renderH2(ctx, block);
-    case "h3":     return renderH3(ctx, block);
-    case "para":   return renderPara(ctx, block);
-    case "list":   return renderList(ctx, block);
-    case "table":  return renderTable(ctx, block);
-    case "footer": return renderFooter(ctx, block);
+    case "rule":      return renderRule(ctx);
+    case "intro":     return renderIntro(ctx, block);
+    case "h2":        return renderH2(ctx, block);
+    case "h3":        return renderH3(ctx, block);
+    case "para":      return renderPara(ctx, block);
+    case "list":      return renderList(ctx, block);
+    case "arrowlist": return renderArrowList(ctx, block);
+    case "table":     return renderTable(ctx, block);
+    case "footer":    return renderFooter(ctx, block);
   }
 }
 
@@ -314,30 +326,40 @@ function renderTable(ctx, block) {
   const colCount  = headCells.length;
   const colW      = USABLE / colCount;
   const cellPad   = 2;
-  const rowH      = 7;
+  const lineH     = 4.5;
+  const cellPadV  = 2.5;
 
-  // Estimate total table height
-  const totalH = (body.length + 1) * rowH + 4;
-  checkPage(ctx, totalH);
+  // Pre-calculate all row heights based on wrapped content
+  ctx.doc.setFontSize(9);
+  const getRowH = (cells, font) => {
+    ctx.doc.setFont("helvetica", font);
+    const maxLines = Math.max(...cells.map(c =>
+      ctx.doc.splitTextToSize(c, colW - cellPad * 2).length
+    ));
+    return maxLines * lineH + cellPadV * 2;
+  };
 
+  const headerH = getRowH(headCells, "bold");
+  checkPage(ctx, headerH + 4);
+
+  // Header row
   const startY = ctx.y;
-
-  // Header row background
   ctx.doc.setFillColor("#1a1a2e");
-  ctx.doc.rect(MARGIN, startY, USABLE, rowH, "F");
-
+  ctx.doc.rect(MARGIN, startY, USABLE, headerH, "F");
   ctx.doc.setFontSize(9);
   ctx.doc.setFont("helvetica", "bold");
   ctx.doc.setTextColor("#ffffff");
   headCells.forEach((cell, i) => {
-    ctx.doc.text(cell, MARGIN + i * colW + cellPad, startY + 5);
+    const wrapped = ctx.doc.splitTextToSize(cell, colW - cellPad * 2);
+    ctx.doc.text(wrapped, MARGIN + i * colW + cellPad, startY + cellPadV + lineH - 1);
   });
-
-  ctx.y = startY + rowH;
+  ctx.y = startY + headerH;
 
   // Body rows
   body.forEach((row, ri) => {
     const cells = parseRow(row);
+    ctx.doc.setFont("helvetica", "normal");
+    const rowH = getRowH(cells, "normal");
     checkPage(ctx, rowH + 2);
 
     if (ri % 2 === 0) {
@@ -348,21 +370,70 @@ function renderTable(ctx, block) {
     ctx.doc.setFontSize(9);
     ctx.doc.setFont("helvetica", "normal");
     ctx.doc.setTextColor("#1f2937");
-
     cells.forEach((cell, i) => {
-      const truncated = cell.length > 55 ? cell.slice(0, 52) + "..." : cell;
-      ctx.doc.text(truncated, MARGIN + i * colW + cellPad, ctx.y + 5);
+      const wrapped = ctx.doc.splitTextToSize(cell, colW - cellPad * 2);
+      ctx.doc.text(wrapped, MARGIN + i * colW + cellPad, ctx.y + cellPadV + lineH - 1);
     });
 
-    // Row border
     ctx.doc.setDrawColor(RULE);
     ctx.doc.setLineWidth(0.2);
     ctx.doc.line(MARGIN, ctx.y + rowH, WIDTH - MARGIN, ctx.y + rowH);
-
     ctx.y += rowH;
   });
 
   ctx.y += 5;
+}
+
+function renderArrowList(ctx, block) {
+  for (const item of block.items) {
+    const hasCode = item.code !== null;
+    const codeText = hasCode ? `${item.code} (${item.title})` : "";
+    const bodyText = item.body;
+
+    checkPage(ctx, 10);
+
+    // Arrow symbol
+    ctx.doc.setFontSize(10);
+    ctx.doc.setFont("helvetica", "bold");
+    ctx.doc.setTextColor(ACCENT);
+    ctx.doc.text("→", MARGIN, ctx.y);
+
+    if (hasCode) {
+      // Bold code label in accent colour
+      ctx.doc.setFontSize(9);
+      ctx.doc.setFont("helvetica", "bold");
+      ctx.doc.setTextColor(ACCENT);
+      const codeW = ctx.doc.getTextWidth(codeText + "  ");
+      ctx.doc.text(codeText, MARGIN + 6, ctx.y);
+
+      if (bodyText) {
+        // Dash separator then normal body
+        ctx.doc.setFont("helvetica", "normal");
+        ctx.doc.setTextColor("#1f2937");
+        const separator = " — ";
+        const sepW = ctx.doc.getTextWidth(separator);
+        ctx.doc.text(separator, MARGIN + 6 + codeW, ctx.y);
+        const remainW = USABLE - 6 - codeW - sepW;
+        const bodyLines = ctx.doc.splitTextToSize(bodyText, remainW);
+        ctx.doc.text(bodyLines[0] || "", MARGIN + 6 + codeW + sepW, ctx.y);
+        if (bodyLines.length > 1) {
+          ctx.y += 5;
+          checkPage(ctx, bodyLines.length * 4.5);
+          ctx.doc.text(bodyLines.slice(1), MARGIN + 6, ctx.y);
+          ctx.y += (bodyLines.length - 1) * 4.5;
+        }
+      }
+    } else {
+      ctx.doc.setFontSize(9);
+      ctx.doc.setFont("helvetica", "normal");
+      ctx.doc.setTextColor("#1f2937");
+      const lines = ctx.doc.splitTextToSize(bodyText, USABLE - 8);
+      ctx.doc.text(lines, MARGIN + 6, ctx.y);
+      ctx.y += (lines.length - 1) * 4.5;
+    }
+
+    ctx.y += 6;
+  }
 }
 
 function renderFooter(ctx, block) {
