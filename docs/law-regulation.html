@@ -82,8 +82,8 @@
 				const filtered = cards.filter(card => card.section === "Law & Regulation");
 				const container = document.getElementById('list');
 				container.innerHTML = filtered.map(card => `
-				  <div class="card">
-					<h2><a href="search.html?search=${encodeURIComponent(card.title)}">
+				 <div class="card">
+					<h2><a href="card.html?code=${encodeURIComponent(card.code)}">
 					  <span>${card.code}</span> - <span>${card.title}</span>
 					</a></h2>
 					${card.description}

@@ -32,20 +32,14 @@
 			<form method="get" action="search.html" id="search-form">
 				<input id="search-input" name="search" type="search" placeholder="Search a term — e.g. audit trail, accountability, human oversight..." autocomplete="off" spellcheck="false"/>
 				<button type="submit">Search</button>
-			</form>			
-		<div id="content">	
+			</form>	
+			
+			<div id="content">	
 				<div id="empty-state">
-				  <p>Type any governance term to find the relevant card.</p>
-				   <p id="probe-question"></p>
+				  <p id="probe-question"></p>
 				</div>
-
-				<section id="results-panel" aria-label="Search results" hidden>sdrfgt</section>
-
-			<section id="card-view" aria-label="Card detail" hidden>
-			  <button id="back-button">← Back to results</button>
-			  <div id="card-content"></div>
-			</section>
-		</div>
+				<div id="results-panel" hidden></div>
+			</div>
 		</main>
 	
 		<footer>			
@@ -79,9 +73,10 @@
 			<div>
 				AI Governance Reference is an independent free to access reference published by Russell Parrott, an independent writer based in Greece specialising in how institutions lose accountability when they rely on automated systems they cannot audit or control.
 			</div>			
-		</footer>
-  <script type="module" src="./js/cards-search.js"></script>
-  <script type="module" src="./js/app.js"></script>
+		</footer>		
+		
+		<script type="module" src="./js/cards-search.js"></script>
+		<script type="module" src="./js/search.js"></script>
 
-</body>
+	</body>
 </html>
