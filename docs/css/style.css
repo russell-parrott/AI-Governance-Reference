@@ -108,6 +108,9 @@ a{
 	width:100%;
 }
 
+
+
+
 #search-form-get{
 display:grid;
 	grid-template-columns: 1fr;
@@ -135,6 +138,9 @@ display:grid;
 	text-transform:uppercase;
 }
 
+/*#search-form[hidden] {
+    display: none;
+}*/
 
 @media (max-width: 800px) {
 	#search-form{padding:1rem 0rem; margin:2rem auto 1rem;}
@@ -229,6 +235,8 @@ footer{
 		margin-bottom:0.5rem;
 	}
 }
+
+
 
 /* ── BROWSE GRID ────────────────────────────────────────── */
 
@@ -455,9 +463,7 @@ border:1px solid #DBD5C2;
 /* ── RELATED CARDS ──────────────────────────────────────── */
 
 #card-related {
-  margin-top: 32px;
-  padding-top: 20px;
-
+  margin-bottom: 32px;
 }
 
 #related-label {
@@ -504,12 +510,9 @@ border:1px solid #DBD5C2;
 		padding:0 1.5rem;	
 	}
 	footer{
-		margin:0.75rem .5rem;
+		margin:0.75rem 1.5rem;
 	}
 	#list{
-	
-	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-	
-}
-	
+		grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+	}	
 }
