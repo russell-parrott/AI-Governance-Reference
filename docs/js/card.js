@@ -65,7 +65,7 @@ function renderMarkdown(md) {
 // ── META & SCHEMA ──────────────────────────────────────────
 
 function setMeta(card) {
-  const BASE  = "https://aigovernanceatlas.com";
+  const BASE  = "https://russell-parrott.github.io/AI-Governance-Reference";
   const url   = `${BASE}/card.html?code=${encodeURIComponent(card.code)}`;
   const raw   = card.description || "";
   const desc  = raw.length > 160 ? raw.slice(0, 157).replace(/\s\S+$/, "") + "..." : raw;
