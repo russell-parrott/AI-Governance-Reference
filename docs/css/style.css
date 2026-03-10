@@ -29,6 +29,15 @@ a{
 	font-weight:600;
 }
 
+h1{
+	margin:0 0 1rem;
+}
+
+h1,h2,h3{
+	font-size:1.35rem;	
+   font-weight: 600;
+}
+
 /* ── HEADER ─────────────────────────────────────────────── */
 
 #navbar {
@@ -108,9 +117,6 @@ a{
 	width:100%;
 }
 
-
-
-
 #search-form-get{
 display:grid;
 	grid-template-columns: 1fr;
@@ -138,9 +144,6 @@ display:grid;
 	text-transform:uppercase;
 }
 
-/*#search-form[hidden] {
-    display: none;
-}*/
 
 @media (max-width: 800px) {
 	#search-form{padding:1rem 0rem; margin:2rem auto 1rem;}
@@ -180,8 +183,8 @@ textarea#search-input {
 /* ── MAIN CONTENT ───────────────────────────────────────── */
 
 main {
-  margin:1rem auto;
-  padding:0 6rem;
+	margin:1rem auto;
+	padding:0 6rem;
 }
 
 footer{
@@ -203,6 +206,16 @@ footer{
 	margin:auto;
 	margin-bottom:2.5rem;
 	max-width:800px;
+}
+
+#reference-structure{
+	display:grid;	
+	grid-template-columns:repeat(auto-fit,minmax(320px, 1fr));
+	column-gap:3rem;
+}
+
+#reference-structure ul{
+	margin:1rem;
 }
 
 .footer-nav{
@@ -237,12 +250,11 @@ footer{
 }
 
 
-
 /* ── BROWSE GRID ────────────────────────────────────────── */
 
 #list{
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	grid-template-columns:repeat(auto-fill, minmax(400px, 1fr));
 	gap:2rem;
 	margin:1.5rem 0;
 }
@@ -253,35 +265,21 @@ footer{
 	padding:0.75rem 1rem;
 }
 
-#list h2{
-	color:#524D32;
-  font-size:1.1rem;
-  font-weight: 600;
-  margin-bottom:0.75rem
-}
-
-
-
 #browse-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
   gap: 10px;
 }
 
 .section-tile {
-
   padding: 16px;
   cursor: pointer;
   transition: border-color 0.15s, background 0.15s;
 }
 
-.section-tile:hover {
-
-}
 
 .section-name {
   display: block;
-  font-size: 13px;
   font-weight: 600;
 
   margin-bottom: 4px;
@@ -297,9 +295,6 @@ footer{
 /* ── SECTION HEADING (when browsing a section) ──────────── */
 
 #section-heading {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   padding-bottom: 12px;
   margin-bottom: 4px;
   border-bottom: 1px solid ;
@@ -327,36 +322,37 @@ padding-bottom:8rem;
 
 
 .card-code{
-  font-size: 11px;
-  font-weight: 600;
   white-space: nowrap;
-  min-width: 56px;
+  min-width: 60px;
 }
 
 .card-title {
   flex: 1;
-  font-size: 14px;
-  font-weight: 500;
-;
 }
 
 
 /* ── CARD VIEW ──────────────────────────────────────────── */
-
+#download-pdf,
 #back-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: none; 
-  font-size: 13px;
-  padding: 6px 12px;
-  cursor: pointer;
-  margin-bottom: 24px;
-  transition: border-color 0.15s, color 0.15s;
+	background: #265420;
+	border:1px solid #265420;
+	color:#f7f6f2;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;	
+	font:inherit;
+	font-weight:600;
+	padding: 6px 12px;
+	cursor: pointer;
+	margin-bottom: 24px;
+	transition: border-color 0.15s, color 0.15s;
 }
 
+#download-pdf:hover,
 #back-button:hover {
-
+	background:#f7f6f2; 
+	border:1px solid #265420;
+	color:#265420;
 }
 
 #card-header {
@@ -371,9 +367,6 @@ padding-bottom:8rem;
 }
 
 .card-section {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
 #card-content{
@@ -389,21 +382,10 @@ padding-bottom:8rem;
 
 /* ── CARD BODY MARKDOWN ─────────────────────────────────── */
 
-#card-body h2 {
-	color:#524D32;
-  font-size:1.25rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
 
-#card-body h3 {
-	color:#524D32;
-  font-size:1.15rem;
-  font-weight: 600;
-}
 
-#card-body h2 + p, #card-body h3 + p{
-	margin-top:0.5rem;
+.card h2{
+	font-size:1.1rem;		
 }
 
 #card-body .card-intro {
@@ -415,7 +397,6 @@ padding-bottom:8rem;
 }
 
 #card-body .card-footer {
-  font-size: 11px;
   margin-top: 32px;
   padding-top: 16px;
 }
@@ -504,6 +485,16 @@ border:1px solid #DBD5C2;
 	padding:2rem;
 	
 }
+
+ol{
+	list-style:none;
+	margin:1rem 0
+}
+
+ol li{
+	margin:1rem 0 0
+}
+
 
 @media (max-width:650px) {
 	main{
