@@ -21,15 +21,15 @@ It is a reference, not legal advice.
 | Section | What it covers | Link |
 |---|---|---|
 | System Properties | What automated systems are and how they behave | [View → System Properties](https://russell-parrott.github.io/system-properties.html) |
-| Authority & Responsibility | Who authorises automated systems and who is accountable for their outcomes | [View →](https://russell-parrott.github.io/authority-responsibility.html) |
-| Control Systems | How automated systems are monitored, supervised and stopped | [View →](https://russell-parrott.github.io/control-systems.html) |
-| Records & Evidence | What must be recorded to explain and reconstruct automated decisions | [View →](https://russell-parrott.github.io/records-evidence.html) |
-| Law & Regulation | The legal obligations automated systems create | [View →](https://russell-parrott.github.io/law-regulation.html) |
-| Legal Landscape | The legal frameworks automated systems commonly trigger | [View →](https://russell-parrott.github.io/legal-landscape.html) |
-| Jurisdictions | How AI governance obligations appear across 13 jurisdictions | [View →](https://russell-parrott.github.io/jurisdictions.html) |
-| Governance Questions | Five practical tests for whether governance demonstrably exists | [View →](https://russell-parrott.github.io/governance-questions.html) |
-| Governance Failures | Common structural governance breakdowns regulators and investigators find | [View →](https://russell-parrott.github.io/governance-failures.html) |
-| Institutional Roles | The professional actors and institutions involved in AI oversight and enforcement | [View →](https://russell-parrott.github.io/institutional-roles.html) |
+| Authority & Responsibility | Who authorises automated systems and who is accountable for their outcomes | [View → Authority & Responsibility](https://russell-parrott.github.io/authority-responsibility.html) |
+| Control Systems | How automated systems are monitored, supervised and stopped | [View → Control Systems](https://russell-parrott.github.io/control-systems.html) |
+| Records & Evidence | What must be recorded to explain and reconstruct automated decisions | [View → Records & Evidence](https://russell-parrott.github.io/records-evidence.html) |
+| Law & Regulation | The legal obligations automated systems create | [View → Law & Regulation](https://russell-parrott.github.io/law-regulation.html) |
+| Legal Landscape | The legal frameworks automated systems commonly trigger | [View → Legal Landscape](https://russell-parrott.github.io/legal-landscape.html) |
+| Jurisdictions | How AI governance obligations appear across 13 jurisdictions | [View → Jurisdictions](https://russell-parrott.github.io/jurisdictions.html) |
+| Governance Questions | Five practical tests for whether governance demonstrably exists | [View → Governance Questions](https://russell-parrott.github.io/governance-questions.html) |
+| Governance Failures | Common structural governance breakdowns regulators and investigators find | [View → Governance Failures](https://russell-parrott.github.io/governance-failures.html) |
+| Institutional Roles | The professional actors and institutions involved in AI oversight and enforcement | [View → Institutional Roles](https://russell-parrott.github.io/institutional-roles.html) |
 
 ---
 
