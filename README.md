@@ -18,17 +18,30 @@ This reference exists to make those terms clear, practical and accessible.
 
 ## Structure
 
-Entries are organised into several governance categories:
 
-- **System Properties** – how automated systems behave and where they fail  
-- **Authority & Responsibility** – who authorises and owns decisions  
-- **Control Systems** – how systems are monitored, stopped or overridden  
-- **Records & Evidence** – what must be recorded to explain decisions  
-- **Law & Regulation** – the legal context for automated decisions  
-- **Governance Concepts** – commonly used governance terminology  
-- **Governance Questions** – practical questions organisations should ask  
+Entries in the AI Governance Reference are organised into ten governance categories.
 
-Each entry explains what the term means, where it is used and why it matters.
+**System Properties** – how automated systems behave, how they make decisions and where technical limitations or failure modes arise.
+
+**Authority & Responsibility** – who authorises systems, who owns their outcomes and how responsibility is allocated within organisations.
+
+**Control Systems** – the mechanisms used to supervise, monitor, intervene in or stop automated systems when necessary.
+
+**Records & Evidence** – the records organisations must keep to explain how automated decisions were produced and who authorised them.
+
+**Law & Regulation** – the legal frameworks that govern automated decision-making, including regulatory obligations and enforcement powers.
+
+**Governance Concepts** – commonly used terms and ideas in governance discussions, explained in plain language.
+
+**Governance Questions** – practical questions organisations should ask when assessing whether automated systems are properly governed.
+
+**Roles & Institutions **– the organisations and professional roles involved when automated decisions are investigated, challenged or regulated.
+
+**Governance Failures** – common structural failures that cause governance systems to break down in practice.
+
+**Jurisdictions & Frameworks** – major regulatory regimes and policy frameworks shaping how automated systems are governed across different countries.
+
+Each entry explains what the term means, where it is used, and why it matters in practice when automated systems are deployed, investigated or challenged.
 
 ---
 
