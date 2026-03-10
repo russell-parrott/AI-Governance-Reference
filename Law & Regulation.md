@@ -1,11 +1,15 @@
 # Law & Regulation
 
-[View this section on the website](https://russell-parrott.github.io/AI-Governance-Reference/law-regulation.html)
+**[→ View this section on the AI Governance Reference](https://russell-parrott.github.io/law-regulation.html)**
 
-This section explains the legal frameworks that govern automated decision-making.
+This section explains the legal obligations that arise when organisations deploy automated decision-making systems.
 
-Entries describe laws, regulatory obligations and enforcement mechanisms that apply to the use of automated systems. This includes legal duties relating to accountability, transparency, risk management and oversight.
+Entries cover the legal concepts most directly relevant to AI governance in practice: individual rights, regulatory oversight, compliance duties, liability and enforcement powers. This includes obligations under the EU AI Act, GDPR, UK data protection law and comparable frameworks.
 
-Understanding the legal context is important because organisations using automated systems remain subject to regulatory and legal scrutiny. Laws determine what organisations must do and what consequences may arise if governance fails.
+Automated systems operate inside a legal framework that already existed before AI became a boardroom concern. These are not future risks. They are current obligations.
 
-This section focuses on legal obligations and regulatory frameworks rather than technical system behaviour or internal governance practices.
+The broader legal frameworks that automated systems activate are mapped in [Legal Landscape](https://russell-parrott.github.io/legal-landscape.html). How those obligations apply across different countries is covered in [Jurisdictions](https://russell-parrott.github.io/jurisdictions.html).
+
+---
+
+Part of the [AI Governance Reference](https://russell-parrott.github.io/AI-Governance-Reference) — a plain-English reference library for AI governance, automated decision-making accountability and algorithmic oversight.
