@@ -1,11 +1,10 @@
 # AI Governance Reference
 
-AI Governance Reference is a free public glossary explaining the terms used in AI governance and automated decision-making.
+AI Governance Reference is a plain-English reference library explaining the concepts, obligations and evidence structures that matter when organisations use AI and automated decision-making systems. It is designed for organisations, investigators, regulators, lawyers and others who need to understand how accountability is established, tested and challenged in practice.
 
-Each entry provides a clear, plain-English explanation of concepts such as human oversight, audit trails, accountability, control systems and decision authority. The aim is to help readers understand how automated systems are governed, monitored and explained in practice.
+The Reference is organised around five core governance questions: what the system is, who is responsible for it, how it is controlled, what records exist, and what legal obligations apply. Supporting sections extend that structure across legal frameworks, jurisdictions, governance tests, common governance failures and the institutional roles involved when automated decisions are examined.
 
-The reference is designed as a dictionary of governance concepts rather than a policy framework or technical tool.
-
+It is a reference, not legal advice.
 ---
 
 ## Purpose
