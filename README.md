@@ -35,7 +35,7 @@ Entries in the AI Governance Reference are organised into ten governance categor
 
 **Governance Questions** – practical questions organisations should ask when assessing whether automated systems are properly governed.
 
-**Roles & Institutions **– the organisations and professional roles involved when automated decisions are investigated, challenged or regulated.
+**Roles & Institutions** – the organisations and professional roles involved when automated decisions are investigated, challenged or regulated.
 
 **Governance Failures** – common structural failures that cause governance systems to break down in practice.
 
