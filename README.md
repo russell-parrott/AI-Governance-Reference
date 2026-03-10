@@ -20,30 +20,29 @@ This reference exists to make those terms clear, practical and accessible.
 
 ## Structure
 
+Entries are organised into ten governance sections:
 
-Entries in the AI Governance Reference are organised into ten governance categories.
+**System Properties** – how automated systems behave and where technical limitations or failure points arise.
 
-**System Properties** – how automated systems behave, how they make decisions and where technical limitations or failure modes arise.
+**Authority & Responsibility** – who authorises automated systems and who is accountable for their outcomes.
 
-**Authority & Responsibility** – who authorises systems, who owns their outcomes and how responsibility is allocated within organisations.
+**Control Systems** – how automated systems are supervised, monitored, stopped or overridden in practice.
 
-**Control Systems** – the mechanisms used to supervise, monitor, intervene in or stop automated systems when necessary.
+**Records & Evidence** – what information must be recorded to explain, reconstruct or defend automated decisions.
 
-**Records & Evidence** – the records organisations must keep to explain how automated decisions were produced and who authorised them.
+**Law & Regulation** – the specific legal obligations and regulatory rules governing automated decision-making.
 
-**Law & Regulation** – the legal frameworks that govern automated decision-making, including regulatory obligations and enforcement powers.
+**Legal Landscape** – the wider legal environment in which automated decisions are interpreted, challenged and enforced.
 
-**Governance Concepts** – commonly used terms and ideas in governance discussions, explained in plain language.
+**Governance Tests** – practical tests used to examine whether governance structures are credible and capable of withstanding scrutiny.
 
-**Governance Questions** – practical questions organisations should ask when assessing whether automated systems are properly governed.
+**Governance Failures** – common structural weaknesses that cause governance systems around automated decisions to break down.
 
-**Roles & Institutions** – the organisations and professional roles involved when automated decisions are investigated, challenged or regulated.
+**Roles & Institutions** – the organisations, authorities and professional roles involved in oversight, investigation and enforcement.
 
-**Governance Failures** – common structural failures that cause governance systems to break down in practice.
+**Jurisdictions** – how different countries and legal systems approach the governance of automated systems.
 
-**Jurisdictions & Frameworks** – major regulatory regimes and policy frameworks shaping how automated systems are governed across different countries.
-
-Each entry explains what the term means, where it is used, and why it matters in practice when automated systems are deployed, investigated or challenged.
+Each entry explains what the term means, where it is used and why it matters.
 
 ---
 
