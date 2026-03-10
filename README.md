@@ -20,29 +20,33 @@ This reference exists to make those terms clear, practical and accessible.
 
 ## Structure
 
-Entries are organised into ten governance sections:
+Entries in the AI Governance Reference are organised into ten sections.
 
-**System Properties** – how automated systems behave and where technical limitations or failure points arise.
+### Core governance sections
 
-**Authority & Responsibility** – who authorises automated systems and who is accountable for their outcomes.
+**System Properties (SP)** — what automated systems are and how they behave.
 
-**Control Systems** – how automated systems are supervised, monitored, stopped or overridden in practice.
+**Authority & Responsibility (AR)** — who is accountable for automated systems.
 
-**Records & Evidence** – what information must be recorded to explain, reconstruct or defend automated decisions.
+**Control Systems (CS)** — how automated systems are monitored, supervised and controlled.
 
-**Law & Regulation** – the specific legal obligations and regulatory rules governing automated decision-making.
+**Records & Evidence (RE)** — what information must be recorded and preserved to explain automated decisions.
 
-**Legal Landscape** – the wider legal environment in which automated decisions are interpreted, challenged and enforced.
+**Law & Regulation (LR)** — the legal obligations that arise when organisations use automated systems.
 
-**Governance Tests** – practical tests used to examine whether governance structures are credible and capable of withstanding scrutiny.
+### Supporting reference sections
 
-**Governance Failures** – common structural weaknesses that cause governance systems around automated decisions to break down.
+**Legal Landscape (LL)** — the legal frameworks and doctrines automated systems trigger.
 
-**Roles & Institutions** – the organisations, authorities and professional roles involved in oversight, investigation and enforcement.
+**Jurisdictions (JX)** — how governance obligations appear in different countries and legal systems.
 
-**Jurisdictions** – how different countries and legal systems approach the governance of automated systems.
+**Governance Questions (GQ)** — five practical tests used to assess whether governance actually exists.
 
-Each entry explains what the term means, where it is used and why it matters.
+**Governance Failures (GF)** — common structural governance breakdowns regulators and investigators encounter.
+
+**Institutional Roles (MK)** — the professional actors and institutions involved in oversight, investigation and enforcement.
+
+Each entry explains what the concept means, where it is used and why it matters when automated systems are deployed, examined or challenged.
 
 ---
 
