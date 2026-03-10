@@ -1,4 +1,6 @@
-#Authority & Responsibility
+# Authority & Responsibility
+
+[View this section on the website](https://russell-parrott.github.io/AI-Governance-Reference/authority-responsibility.html)
 
 This section explains who authorises automated systems and who is responsible for their outcomes.
 
