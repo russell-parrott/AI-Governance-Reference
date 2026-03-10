@@ -1,103 +1,50 @@
 # AI Governance Reference
 
-AI Governance Reference is a plain-English reference library explaining the concepts, obligations and evidence structures that matter when organisations use AI and automated decision-making systems. It is designed for organisations, investigators, regulators, lawyers and others who need to understand how accountability is established, tested and challenged in practice.
+A plain-English reference library explaining AI governance, automated decision-making accountability, and the evidence structures regulators, investigators and courts rely on when automated systems are examined.
 
-The Reference is organised around five core governance questions: what the system is, who is responsible for it, how it is controlled, what records exist, and what legal obligations apply. Supporting sections extend that structure across legal frameworks, jurisdictions, governance tests, common governance failures and the institutional roles involved when automated decisions are examined.
+**[→ Read the full reference](https://russell-parrott.github.io/AI-Governance-Reference)**
 
-The entire Reference is fully searchable. Entries can be located by title or by related keywords, allowing readers to find concepts even when different terminology is used. Entries are also interlinked, enabling readers to move easily between related governance concepts, legal obligations and system properties.
+---
+
+## What it covers
+
+AI governance terms are widely used and poorly explained. Terms such as audit trail, human oversight, algorithmic accountability, model monitoring and system explainability appear in regulation, litigation and boardroom discussion — often without a shared understanding of what they actually require.
+
+This reference makes those terms clear, practical and checkable. Each entry explains what a concept means, why it matters for governance, what the real risk is when it is absent, and what legal obligations surround it.
 
 It is a reference, not legal advice.
 
 ---
 
-## Purpose
+## Sections
 
-Many organisations are already using automated systems without fully understanding the governance language surrounding them. Terms such as *audit trail*, *human oversight*, *model monitoring* or *system accountability* are widely used but often poorly explained.
-
-This reference exists to make those terms clear, practical and accessible.
-
----
-
-## Structure
-
-Entries in the AI Governance Reference are organised into ten sections.
-
-### Core governance sections
-
-**System Properties (SP)** - what automated systems are and how they behave.
-
-**Authority & Responsibility (AR)** - who is accountable for automated systems.
-
-**Control Systems (CS)** - how automated systems are monitored, supervised and controlled.
-
-**Records & Evidence (RE)** - what information must be recorded and preserved to explain automated decisions.
-
-**Law & Regulation (LR)** - the legal obligations that arise when organisations use automated systems.
-
-### Supporting reference sections
-
-**Legal Landscape (LL)** - the legal frameworks and doctrines automated systems trigger.
-
-**Jurisdictions (JX)** - how governance obligations appear in different countries and legal systems.
-
-**Governance Questions (GQ)** - five practical tests used to assess whether governance actually exists.
-
-**Governance Failures (GF)** - common structural governance breakdowns regulators and investigators encounter.
-
-**Institutional Roles (MK)** - the professional actors and institutions involved in oversight, investigation and enforcement.
-
-Each entry explains what the concept means, where it is used and why it matters when automated systems are deployed, examined or challenged.
+| Section | What it covers | Link |
+|---|---|---|
+| System Properties | What automated systems are and how they behave | [View →](https://russell-parrott.github.io/system-properties.html) |
+| Authority & Responsibility | Who authorises automated systems and who is accountable for their outcomes | [View →](https://russell-parrott.github.io/authority-responsibility.html) |
+| Control Systems | How automated systems are monitored, supervised and stopped | [View →](https://russell-parrott.github.io/control-systems.html) |
+| Records & Evidence | What must be recorded to explain and reconstruct automated decisions | [View →](https://russell-parrott.github.io/records-evidence.html) |
+| Law & Regulation | The legal obligations automated systems create | [View →](https://russell-parrott.github.io/law-regulation.html) |
+| Legal Landscape | The legal frameworks automated systems commonly trigger | [View →](https://russell-parrott.github.io/legal-landscape.html) |
+| Jurisdictions | How AI governance obligations appear across 13 jurisdictions | [View →](https://russell-parrott.github.io/jurisdictions.html) |
+| Governance Questions | Five practical tests for whether governance demonstrably exists | [View →](https://russell-parrott.github.io/governance-questions.html) |
+| Governance Failures | Common structural governance breakdowns regulators and investigators find | [View →](https://russell-parrott.github.io/governance-failures.html) |
+| Institutional Roles | The professional actors and institutions involved in AI oversight and enforcement | [View →](https://russell-parrott.github.io/institutional-roles.html) |
 
 ---
 
-## Core governance entries
+## Who it is for
 
-Each entry in the AI Governance Reference for the core governance sections follows a consistent structure designed to explain governance concepts clearly and practically.
-
-**What Is It?** - Defines the concept in plain English and explains how it operates in automated systems.
-
-**Why Does It Matter?** - Explains why the concept is important for governance, accountability and organisational control.
-
-**What’s the Real Risk?** - Describes the practical risks that arise when the concept is misunderstood, ignored or poorly implemented.
-
-**Where Does It Appear?** - Shows the types of systems, sectors or environments where the concept commonly arises.
-
-**What It Means in Practice** - Sets out the practical questions organisations must be able to answer if governance is functioning.
-
-**Advantages and Limitations** - Summarises the strengths and practical constraints of the concept.
-
-**The Law** - Explains the direction of legal obligations and regulatory expectations connected to the concept.
-
----
-
-## Keywords and terminology
-
-Each entry includes keywords that capture alternative terminology and commonly confused terms. These keywords help readers locate the correct concept even when different communities use different language.
-
-For example, a card titled **Audit Trail** may include keywords such as *logs*, *system log* or *activity logging*.
-
----
-
-## Website
-
-The reference is published as a static website built with HTML, CSS and JavaScript.  
-All entries are stored in a JSON index and rendered dynamically in the browser.
-
-The website: https://russell-parrott.github.io/AI-Governance-Reference
+Organisations deploying AI systems. Regulators and investigators examining automated decisions. Lawyers advising on AI liability, data protection and algorithmic accountability. Anyone who needs to understand what AI governance actually requires in practice — under the EU AI Act, GDPR, UK data protection law, or comparable frameworks.
 
 ---
 
 ## Licence
 
-This work is published under the **Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** licence.
-
-The material may be shared freely provided it is not modified or used commercially.
+Published under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). Free to share with attribution. Not for commercial use or modification.
 
 ---
 
 ## Author
 
-**Russell Parrott**  
-Independent writer focusing on accountability and governance in automated systems.
-
-His work examines how organisations lose accountability when decisions are delegated to systems they cannot fully explain or control.
+Russell Parrott — independent writer examining how institutions lose accountability when decisions are delegated to automated systems they cannot audit, reconstruct or explain.
