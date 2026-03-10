@@ -50,7 +50,7 @@ Each entry explains what the concept means, where it is used and why it matters 
 
 ---
 
-## Card Structure
+## Core governance entries
 
 Each entry in the AI Governance Reference for the core governance sections follows a consistent structure designed to explain governance concepts clearly and practically.
 
