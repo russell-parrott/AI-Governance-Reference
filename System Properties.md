@@ -1,4 +1,4 @@
-#System Properties
+# System Properties
 
 [View this section on the website](https://russell-parrott.github.io/AI-Governance-Reference/system-properties.html)
 
