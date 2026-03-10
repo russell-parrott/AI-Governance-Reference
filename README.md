@@ -24,27 +24,27 @@ Entries in the AI Governance Reference are organised into ten sections.
 
 ### Core governance sections
 
-**System Properties (SP)** — what automated systems are and how they behave.
+**System Properties (SP)** - what automated systems are and how they behave.
 
-**Authority & Responsibility (AR)** — who is accountable for automated systems.
+**Authority & Responsibility (AR)** - who is accountable for automated systems.
 
-**Control Systems (CS)** — how automated systems are monitored, supervised and controlled.
+**Control Systems (CS)** - how automated systems are monitored, supervised and controlled.
 
-**Records & Evidence (RE)** — what information must be recorded and preserved to explain automated decisions.
+**Records & Evidence (RE)** - what information must be recorded and preserved to explain automated decisions.
 
-**Law & Regulation (LR)** — the legal obligations that arise when organisations use automated systems.
+**Law & Regulation (LR)** - the legal obligations that arise when organisations use automated systems.
 
 ### Supporting reference sections
 
-**Legal Landscape (LL)** — the legal frameworks and doctrines automated systems trigger.
+**Legal Landscape (LL)** - the legal frameworks and doctrines automated systems trigger.
 
-**Jurisdictions (JX)** — how governance obligations appear in different countries and legal systems.
+**Jurisdictions (JX)** - how governance obligations appear in different countries and legal systems.
 
-**Governance Questions (GQ)** — five practical tests used to assess whether governance actually exists.
+**Governance Questions (GQ)** - five practical tests used to assess whether governance actually exists.
 
-**Governance Failures (GF)** — common structural governance breakdowns regulators and investigators encounter.
+**Governance Failures (GF)** - common structural governance breakdowns regulators and investigators encounter.
 
-**Institutional Roles (MK)** — the professional actors and institutions involved in oversight, investigation and enforcement.
+**Institutional Roles (MK)** - the professional actors and institutions involved in oversight, investigation and enforcement.
 
 Each entry explains what the concept means, where it is used and why it matters when automated systems are deployed, examined or challenged.
 
@@ -54,26 +54,19 @@ Each entry explains what the concept means, where it is used and why it matters 
 
 Each entry in the AI Governance Reference for the core governance sections follows a consistent structure designed to explain governance concepts clearly and practically.
 
-**What Is It?**
-Defines the concept in plain English and explains how it operates in automated systems.
+**What Is It?** - Defines the concept in plain English and explains how it operates in automated systems.
 
-**Why Does It Matter?**
-Explains why the concept is important for governance, accountability and organisational control.
+**Why Does It Matter?** - Explains why the concept is important for governance, accountability and organisational control.
 
-**What’s the Real Risk?**
-Describes the practical risks that arise when the concept is misunderstood, ignored or poorly implemented.
+**What’s the Real Risk?** - Describes the practical risks that arise when the concept is misunderstood, ignored or poorly implemented.
 
-**Where Does It Appear?**
-Shows the types of systems, sectors or environments where the concept commonly arises.
+**Where Does It Appear?** - Shows the types of systems, sectors or environments where the concept commonly arises.
 
-**What It Means in Practice**
-Sets out the practical questions organisations must be able to answer if governance is functioning.
+**What It Means in Practice** - Sets out the practical questions organisations must be able to answer if governance is functioning.
 
-**Advantages and Limitations**
-Summarises the strengths and practical constraints of the concept.
+**Advantages and Limitations** - Summarises the strengths and practical constraints of the concept.
 
-**The Law**
-Explains the direction of legal obligations and regulatory expectations connected to the concept.
+**The Law** - Explains the direction of legal obligations and regulatory expectations connected to the concept.
 
 ---
 
