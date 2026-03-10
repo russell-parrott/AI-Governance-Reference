@@ -1,4 +1,6 @@
-#Control Systems
+# Control Systems
+
+[View this section on the website](https://russell-parrott.github.io/AI-Governance-Reference/control-systems.html)
 
 This section describes the mechanisms used to supervise, manage and intervene in automated systems.
 
