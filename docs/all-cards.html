@@ -196,31 +196,29 @@
 			.then(cards => {
 				allCards = cards;
 				render(cards);				
-			})		
-		
+			})			
   
-			function render(cards){
-				
+			function render(cards){				
 				const container = document.getElementById('list');
 				container.innerHTML = cards.map(card => `
 					<div class="card">
-					<h2><a href="card.html?code=${encodeURIComponent(card.code)}">
+					<h2><a href="card.html?code=${encodeURIComponent(card.code)}" title="${card.code} - ${card.title}">
 					  <span>${card.code}</span> - <span>${card.title}</span>
 					</a></h2>
 					${card.description}
 				  </div>
 				  `).join('');
-				}  
-				  
-				document.getElementById('search-input').addEventListener('input', e => {
-				  const query = e.target.value.toLowerCase().trim();
-				  const filtered = allCards.filter(card =>
+			}  				  
+			
+			document.getElementById('search-input').addEventListener('input', e => {
+				const query = e.target.value.toLowerCase().trim();
+				const filtered = allCards.filter(card =>
 					card.title.toLowerCase().includes(query) ||
 					card.code.toLowerCase().includes(query) ||
 					card.description.toLowerCase().includes(query)
-				  );
-				  render(query ? filtered : allCards);
-				});
+				);
+				render(query ? filtered : allCards);
+			});
 
 		</script>
 		

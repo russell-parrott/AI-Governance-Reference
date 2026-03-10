@@ -7,6 +7,15 @@
   
   
   <link rel="stylesheet" href="./css/style.css" />
+  
+  	<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDL416XTTS"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-JDL416XTTS');
+		</script>
+		
 </head>
 <body>
 
@@ -24,6 +33,7 @@
 				<a href="control-systems.html" title="How automated systems are monitored and stopped.">Control Systems</a>
 				<a href="records-evidence.html" title="What must be recorded and why it matters.">Records &amp; Evidence</a>
 				<a href="law-regulation.html" title="Legal obligations automated systems create.">Law &amp; Regulation</a>
+				<a href="legal-landscape.html" title="Legal frameworks automated systems trigger.">Legal Landscape</a>
 			</div>						
 		</header>
 
@@ -32,8 +42,15 @@
 			
 			<div id="content">		
 
-				<button id="back-button" type="button">Back to search</button>
-				<button id="download-pdf" type="button">Download PDF</button>
+				<button id="back-button" type="button" title="Back to search">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/></svg>
+					Back to search
+				</button>
+				
+				<button id="download-pdf" type="button" title="Download this pdf">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293z"/><path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/></svg>
+					Download PDF
+				</button>
 
 				<div id="not-found" hidden>
 				  <h1>Card not found</h1>
@@ -50,7 +67,7 @@
 		<footer>			
 			<div>			
 				<div class="footer-nav">
-					<strong>AI Governance</strong> 
+					<strong>Core framework</strong> 
 					<a href="system-properties.html" title="What automated systems do and where they fail.">System Properties</a>
 					<a href="authority-responsibility.html" title="Who is accountable for automated systems.">Authority &amp; Responsibility</a>
 					<a href="control-systems.html" title="How automated systems are monitored and stopped.">Control Systems</a>
@@ -61,14 +78,20 @@
 					<strong>Reference</strong> 
 					<a href="what-x-is-not.html" title="What governance terms actually require.">What these Terms are not</a>
 					<a href="governance-questions.html" title="Five tests for whether governance exists.">Governance Questions</a>					
-					<a href="governance-failures.html" title="Common governance failures in automated systems.">Governance Failures</a>					
+					<a href="governance-failures.html" title="Common governance failures in automated systems.">Governance Failures</a>	
+				</div>
+				<div class="footer-nav">
+					<strong>Legal Context</strong>
 					<a href="legal-landscape.html" title="Legal frameworks automated systems trigger.">Legal Landscape</a>
-					<a href="jurisdictions.html" title="AI governance obligations in 13 jurisdictions.">Jurisdictions</a>					
-					<a href="institutional-roles.html" title="Roles involved in governing automated systems.">Institutional Roles</a>					
-					<a href="all-cards.html" title="What the AI Governance Reference is and who it is for.">All cards</a>				
+					<a href="jurisdictions.html" title="AI governance obligations in 13 jurisdictions.">Jurisdictions</a>	
+				</div>
+				<div class="footer-nav">
+					<strong>Ecosystem</strong>
+					<a href="institutional-roles.html" title="Roles involved in governing automated systems.">Institutional Roles</a>	
 				</div>
 				<div class="footer-nav">
 					<strong>About</strong> 
+					<a href="all-cards.html" title="What the AI Governance Reference is and who it is for.">All cards</a>	
 					<a href="about.html" title="What the AI Governance Reference is and who it is for.">About</a>
 					<a href="faq.html" title="Common questions about the AI Governance Reference.">FAQ</a>
 					<a href="contact.html" title="Get in touch with the AI Governance Reference.">Contact</a>
