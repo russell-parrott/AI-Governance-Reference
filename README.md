@@ -50,6 +50,33 @@ Each entry explains what the concept means, where it is used and why it matters 
 
 ---
 
+## Card Structure
+
+Each entry in the AI Governance Reference for the core governance sections follows a consistent structure designed to explain governance concepts clearly and practically.
+
+**What Is It?**
+Defines the concept in plain English and explains how it operates in automated systems.
+
+**Why Does It Matter?**
+Explains why the concept is important for governance, accountability and organisational control.
+
+**What’s the Real Risk?**
+Describes the practical risks that arise when the concept is misunderstood, ignored or poorly implemented.
+
+**Where Does It Appear?**
+Shows the types of systems, sectors or environments where the concept commonly arises.
+
+**What It Means in Practice**
+Sets out the practical questions organisations must be able to answer if governance is functioning.
+
+**Advantages and Limitations**
+Summarises the strengths and practical constraints of the concept.
+
+**The Law**
+Explains the direction of legal obligations and regulatory expectations connected to the concept.
+
+---
+
 ## Keywords and terminology
 
 Each entry includes keywords that capture alternative terminology and commonly confused terms. These keywords help readers locate the correct concept even when different communities use different language.
