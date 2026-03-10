@@ -24,7 +24,7 @@
 		<meta property="twitter:image" content="https://russell-parrott.github.io/ai-governance-reference/img/og-image.png" />
 		
 		<link rel="stylesheet" href="./css/style.css" />
-		<style> h1{ margin-top:3rem; }ul{margin:1rem;}</style>
+		<style> h1{ margin-top:3rem; }ul{margin:1rem;}h2{ margin-bottom:0.75rem; }</style>
 		
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDL416XTTS"></script>
 		<script>
@@ -63,8 +63,7 @@
 			The AI Governance Reference is a structured collection of short reference briefings, each explaining a single governance concept in clear, non-technical language. Every briefing stands on its own, so a reader can look up a single term and understand what it means without needing to read the rest of the collection. At the same time, each briefing is connected to related concepts, allowing the reader to follow the structure of governance as it operates in practice.
 			<p/>
 			The material is organised across 10 areas that together describe how automated decisions are governed and examined.
-			<p/>					
-			
+			<p/>	
 			<h2>The AI Governance Reference Structure</h2>
 			<ul>
 				<li><strong>System Properties (SP)</strong> — what automated systems are and how they behave</li>
@@ -81,15 +80,46 @@
 				<li><strong>Governance Failures (GF)</strong> — structural governance breakdowns regulators find</li>
 				<li><strong>Institutional Roles (MK)</strong> — the professional actors involved in governance</li>
 			</ul>
-			Together these elements reflect what scrutiny actually looks like. When automated decisions are questioned, regulators, investigators and courts do not ask whether the technology was impressive. They ask whether the system was governed properly, whether responsibility was clear, and whether the organisation can demonstrate what happened.
+			<h3>System Properties</h3>
+			Every automated system has a defined purpose, a set of inputs, and a range of outputs. Before any governance conversation can begin, the system itself must be understood. That means what it was designed to do, what data it relies on, how it learns, where its limits are and what it produces. Without that foundation, accountability has nothing to attach to.
 			<p/>
-			<h3>AI Governance Reference explains the concepts that answer those questions.</h3>
+			System Properties explains the vocabulary that makes that description possible. Concepts such as intended use, training data, dataset bias, system scope, model performance and explainability are not technical abstractions. They are the terms that appear in regulatory guidance, board discussions and legal proceedings when automated decisions are examined. Understanding them is the first step in governing the systems they describe.
+			<h3>Authority & Responsibility</h3>
+			When an automated system makes a decision that affects someone, the question that follows is always the same: who was responsible? The answer depends on whether accountability was genuinely assigned, whether roles were clearly defined, and whether the people named as responsible actually had the authority and information to exercise that responsibility. In practice, these conditions are often assumed rather than established.
 			<p/>
-			The AI Governance Reference is designed for anyone who needs to understand governance language quickly and accurately. Directors preparing for board discussions, managers overseeing automated systems, lawyers examining regulatory exposure, journalists reporting on enforcement actions and students studying technology governance can all use it as a reference.
+			Authority and Responsibility explains the concepts that determine whether accountability is real or nominal, accountability, role definition, delegated authority, board and management responsibility, vendor accountability, and the gaps that appear when responsibility is unclear. These are the concepts regulators examine and courts apply. Organisations that cannot answer the basic accountability questions before something goes wrong will find them very difficult to answer after.
+			<h3>Control Systems</h3>
+			An automated system that runs without human attention is a system without meaningful oversight. Effective governance requires that humans can see what the system is doing, respond when it behaves unexpectedly, intervene when necessary and stop it when required. Each of those capabilities depends on specific mechanisms being in place, mechanisms that must exist before they are needed, not be improvised in response to a problem.
 			<p/>
-			It is not a compliance checklist, a technical manual or legal advice. It is a reference tool that explains what the key governance concepts mean and how they connect.
+			Control Systems explains the operational concepts that make human control real: monitoring, alert systems, escalation procedures, human review, intervention authority, change management and system shutdown. Together these concepts describe the difference between a system that is governed and one that merely operates. When regulators investigate automated decision failures, the presence or absence of these controls is among the first things they examine.
+			<h3>Records & Evidence</h3>
+			Governance is what can be demonstrated. A system may have been well designed, carefully deployed and responsibly operated. But if no records exist to show that, the organisation cannot demonstrate it when challenged. Investigation, litigation and regulatory scrutiny all begin with the same question: what records exist and what do they show?
 			<p/>
-			In short, AI Governance Reference is a map of the concepts that define accountability for automated decisions.		
+			Records and Evidence explains the documentation, logs, decision records, audit trails and evidence preservation practices that allow an organisation to reconstruct what happened in a specific case. These concepts matter not only for regulatory compliance but for the basic integrity of governance itself. An organisation that makes consequential automated decisions without maintaining adequate records has not governed those decisions, it has only made them.
+			<h3>Law & Regulation</h3>
+			Automated systems operate inside a legal framework that already existed long before AI became a boardroom concern. Data protection law, discrimination law, consumer protection, financial regulation, product liability — these frameworks were built around the principle that decisions affecting people must be accountable, explainable and subject to scrutiny. When AI systems make those decisions, the same principles apply.
+			<p/>
+			Law and Regulation explains the legal concepts most directly relevant to organisations that deploy automated decision systems — individual rights, regulatory oversight, compliance duties, liability, enforcement powers and risk classification. These are not future risks waiting to materialise. They are current obligations that apply from the moment a system makes its first decision. Understanding them is not a legal function. It is a governance requirement.
+			<h3>Legal Landscape</h3>
+			AI governance does not exist in isolation from law. The major legal frameworks that organisations operate under — data protection, discrimination law, financial regulation, product liability, corporate governance, securities disclosure — each carry specific obligations that automated systems trigger. Understanding which frameworks apply, why they apply, and what they require is essential context for anyone responsible for governing AI systems.
+			<p/>
+			The Legal Landscape section explains twelve areas of law that automated systems commonly encounter. Each briefing explains what the framework covers, why AI systems activate it, and how it connects to the governance concepts in the Reference. The section spans AI-specific regulation including the EU AI Act, through to sector-specific frameworks in healthcare, finance and critical infrastructure. It does not provide legal advice. It explains the legal terrain clearly enough that a non-specialist can understand where the obligations come from and what they demand.
+			<h3>Jurisdictions</h3>
+			When automated systems make decisions that affect people, the legal obligations that govern those decisions depend on where those people are. The EU AI Act applies in Europe. POPIA applies in South Africa. The NDPA applies in Nigeria. Governance concepts are universal — the legal obligations that enforce them are not.
+			<p/>
+			The Jurisdiction Series explains the AI governance and regulatory landscape in thirteen countries and regions. Each card identifies the frameworks in force, the regulators with enforcement authority, what triggers obligations, and how those obligations connect to the governance concepts in the Reference. These are current obligations, not future risks. Organisations deploying automated systems across multiple markets face them now.
+			<h3>Governance Questions</h3>
+			Governance is not what an organisation says it does. It is what it can demonstrate. The five governance questions are not a checklist — they are tests. Each one identifies a specific capability that genuine governance requires. An organisation that cannot answer any one of them has a governance gap, regardless of what its policies say.
+			<p/>
+			The questions are operational. They ask what actually exists — whether someone has the authority to act, whether records were kept, whether the system can be stopped. They are the questions a regulator, a court or a board should ask when an automated decision is challenged. They are also the questions an organisation should ask itself before that moment arrives.
+			<h3>Governance Failures</h3>
+			Governance is usually examined most closely when something has gone wrong. An automated decision causes harm, a regulator begins an investigation, or a court asks how a system reached a particular outcome. At that point the question is no longer whether governance structures existed in principle, but whether they functioned in practice and whether the organisation can demonstrate that they did.
+			<p/>
+			Governance Failures explains the patterns investigators repeatedly encounter when systems are scrutinised. Failures such as oversight without authority, monitoring without response, undocumented system changes and records created after an incident reveal where governance structures broke down. Recognising these patterns helps organisations understand how accountability failures occur and what evidence regulators and courts look for when they examine automated systems.
+			<h3>Institutional Roles</h3>
+			Automated systems do not operate in isolation. They are designed, deployed, monitored and examined by people working in different professional roles — engineers who build them, managers who deploy them, directors who approve them, regulators who oversee them and investigators who examine them when something goes wrong. Each role sees the system from a different position and asks different questions about how it works and who is responsible.
+			<p/>
+			Institutional Roles explains the professional perspectives that shape those questions. Engineers focus on system behaviour, auditors on evidence, regulators on compliance and directors on accountability. Understanding these roles clarifies why governance discussions take the form they do and why different participants emphasise different risks when automated systems are examined.
 		</main>	
 		
 		<footer>			
