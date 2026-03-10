@@ -1,4 +1,6 @@
-#Records & Evidence
+# Records & Evidence
+
+[View this section on the website](https://russell-parrott.github.io/AI-Governance-Reference/records-evidence.html)
 
 This section explains the records organisations must keep to explain how automated decisions were made.
 
