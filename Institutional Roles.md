@@ -1,4 +1,4 @@
-# Roles & Institutions
+# Institutional Roles
 
 View this section on the website:https://russell-parrott.github.io/AI-Governance-Reference/institutional-roles.html
 
