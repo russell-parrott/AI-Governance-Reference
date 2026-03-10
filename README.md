@@ -4,6 +4,8 @@ AI Governance Reference is a plain-English reference library explaining the conc
 
 The Reference is organised around five core governance questions: what the system is, who is responsible for it, how it is controlled, what records exist, and what legal obligations apply. Supporting sections extend that structure across legal frameworks, jurisdictions, governance tests, common governance failures and the institutional roles involved when automated decisions are examined.
 
+The entire reference is fully searchable. Entries can be located by title or by related keywords, allowing readers to find concepts even when different terminology is used. Entries are also interlinked, enabling readers to move easily between related governance concepts, legal obligations and system properties.
+
 It is a reference, not legal advice.
 
 ---
