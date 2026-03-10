@@ -1,6 +1,10 @@
 # AI Governance Reference
 
-A plain-English reference library explaining AI governance, automated decision-making accountability, and the evidence structures regulators, investigators and courts rely on when automated systems are examined.
+AI Governance Reference is a plain-English reference library explaining the concepts, obligations and evidence structures that matter when organisations use AI and automated decision-making systems. It is designed for organisations, investigators, regulators, lawyers and others who need to understand how accountability is established, tested and challenged in practice.
+
+The Reference is organised around five core governance questions: what the system is, who is responsible for it, how it is controlled, what records exist, and what legal obligations apply. Supporting sections extend that structure across legal frameworks, jurisdictions, governance tests, common governance failures and the institutional roles involved when automated decisions are examined.
+
+The entire Reference is fully searchable. Entries can be located by title or by related keywords, allowing readers to find concepts even when different terminology is used. Entries are also interlinked, enabling readers to move easily between related governance concepts, legal obligations and system properties.
 
 **[→ Read the full reference](https://russell-parrott.github.io/AI-Governance-Reference)**
 
