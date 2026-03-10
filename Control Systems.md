@@ -1,11 +1,15 @@
 # Control Systems
 
-[View this section on the website](https://russell-parrott.github.io/AI-Governance-Reference/control-systems.html)
+**[→ View this section on the AI Governance Reference](https://russell-parrott.github.io/control-systems.html)**
 
-This section describes the mechanisms used to supervise, manage and intervene in automated systems.
+This section explains how automated systems are monitored, supervised and controlled.
 
-Entries explain how organisations monitor automated behaviour, detect problems and intervene when necessary. This includes tools and procedures such as monitoring systems, escalation mechanisms, overrides and shutdown processes.
+Entries describe the mechanisms that keep humans in the loop: monitoring, alerts, escalation, intervention and shutdown. Each concept describes a different layer of operational control. Together they define whether an organisation can detect problems, respond to them and stop them from continuing.
 
-Control systems matter because governance requires more than assigning responsibility. Organisations must also be able to supervise automated behaviour and stop it when necessary.
+A system that runs without human attention is a system without meaningful oversight. Control Systems explains what meaningful oversight actually requires in practice — and what its absence looks like to a regulator or investigator.
 
-This section focuses on operational control mechanisms. It does not deal with the legal responsibilities surrounding automated decisions or the evidence used to explain them.
+Who holds control responsibility is covered in [Authority & Responsibility](https://russell-parrott.github.io/authority-responsibility.html). What records control activity must generate is covered in [Records & Evidence](https://russell-parrott.github.io/records-evidence.html).
+
+---
+
+Part of the [AI Governance Reference](https://russell-parrott.github.io/AI-Governance-Reference) — a plain-English reference library for AI governance, automated decision-making accountability and algorithmic oversight.
