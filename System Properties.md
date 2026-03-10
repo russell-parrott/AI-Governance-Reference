@@ -1,11 +1,15 @@
 # System Properties
 
-[View this section on the website](https://russell-parrott.github.io/AI-Governance-Reference/system-properties.html)
+**[→ View this section on the AI Governance Reference](https://russell-parrott.github.io/system-properties.html)**
 
-This section explains how automated and AI systems behave in practice. It focuses on the technical characteristics that influence how systems produce outputs and decisions.
+This section explains what automated systems are and how they behave.
 
-Entries in this category describe properties such as automation, training data, model behaviour, probabilistic outputs, system limitations and common failure modes. The aim is to explain how these systems operate in ways that affect reliability, predictability and accountability.
+Entries describe the vocabulary used to define a system's purpose, its inputs, its outputs and the limits of its operation. Concepts include intended use, training data, system scope, model performance and system boundaries.
 
-Understanding system properties is important because governance begins with understanding the system itself. Organisations cannot supervise or regulate behaviour they do not understand.
+These are the starting point for any governance conversation. Regulators, investigators and courts cannot assess accountability for an automated system they cannot describe. System Properties provides that descriptive foundation.
 
-This section focuses on how systems behave, not who is responsible for them or how they are managed. Questions of accountability and oversight are addressed in other sections of the Reference.
+This section does not examine who is responsible for systems or what records must exist. Those are covered in [Authority & Responsibility](https://russell-parrott.github.io/authority-responsibility.html) and [Records & Evidence](https://russell-parrott.github.io/records-evidence.html).
+
+---
+
+Part of the [AI Governance Reference](https://russell-parrott.github.io/AI-Governance-Reference) — a plain-English reference library for AI governance, automated decision-making accountability and algorithmic oversight.
