@@ -10,7 +10,7 @@ A plain-English reference library explaining AI governance, automated decision-m
 
 AI governance terms are widely used and poorly explained. Terms such as audit trail, human oversight, algorithmic accountability, model monitoring and system explainability appear in regulation, litigation and boardroom discussion — often without a shared understanding of what they actually require.
 
-This reference makes those terms clear, practical and checkable. Each entry explains what a concept means, why it matters for governance, what the real risk is when it is absent, and what legal obligations surround it.
+This reference makes those terms clear, practical and checkable. Each entry explains what a concept means, why it matters for governance, what the real risk is when it is absent and what legal obligations surround it.
 
 It is a reference, not legal advice.
 
@@ -20,7 +20,7 @@ It is a reference, not legal advice.
 
 | Section | What it covers | Link |
 |---|---|---|
-| System Properties | What automated systems are and how they behave | [View →](https://russell-parrott.github.io/system-properties.html) |
+| System Properties | What automated systems are and how they behave | [View → System Properties](https://russell-parrott.github.io/system-properties.html) |
 | Authority & Responsibility | Who authorises automated systems and who is accountable for their outcomes | [View →](https://russell-parrott.github.io/authority-responsibility.html) |
 | Control Systems | How automated systems are monitored, supervised and stopped | [View →](https://russell-parrott.github.io/control-systems.html) |
 | Records & Evidence | What must be recorded to explain and reconstruct automated decisions | [View →](https://russell-parrott.github.io/records-evidence.html) |
