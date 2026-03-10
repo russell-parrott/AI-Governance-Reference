@@ -1,0 +1,9 @@
+#Control Systems
+
+This section describes the mechanisms used to supervise, manage and intervene in automated systems.
+
+Entries explain how organisations monitor automated behaviour, detect problems and intervene when necessary. This includes tools and procedures such as monitoring systems, escalation mechanisms, overrides and shutdown processes.
+
+Control systems matter because governance requires more than assigning responsibility. Organisations must also be able to supervise automated behaviour and stop it when necessary.
+
+This section focuses on operational control mechanisms. It does not deal with the legal responsibilities surrounding automated decisions or the evidence used to explain them.
