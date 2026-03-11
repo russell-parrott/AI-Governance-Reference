@@ -84,11 +84,11 @@ function renderMarkdown(md) {
 // ── META & SCHEMA ──────────────────────────────────────────
 
 function setMeta(card) {
-  const BASE  = "https://aigovernanceatlas.com";
+  const BASE  = "https://russell-parrott.github.io/AI-Governance-Reference";
   const url   = `${BASE}/card.html?code=${encodeURIComponent(card.code)}`;
   const raw   = card.description || "";
   const desc  = raw.length > 160 ? raw.slice(0, 157).replace(/\s\S+$/, "") + "..." : raw;
-  const title = `${card.code} ${card.title} | AI Governance Atlas`;
+  const title = `${card.code} ${card.title} | AI Governance Reference`;
   const image = `${BASE}/img/og-image.png`;
 
   document.title = title;
@@ -137,7 +137,7 @@ function setMeta(card) {
     "identifier": card.code,
     "inDefinedTermSet": {
       "@type": "DefinedTermSet",
-      "name": "AI Governance Atlas",
+      "name": "AI Governance Reference",
       "url": BASE
     },
     "url": url
@@ -163,7 +163,7 @@ async function init() {
   const relatedLinks = (card.related || []).map(relCode => {
     const rel = cardByCode(relCode, allCards);
     return rel
-      ? `<a class="related-link" href="card.html?code=${encodeURIComponent(rel.code)}">${rel.code} — ${rel.title}</a>`
+      ? `<a class="related-link" href="card.html?code=${encodeURIComponent(rel.code)}" title="${rel.code} - ${rel.title}">${rel.code} - ${rel.title}</a>`
       : "";
   }).filter(Boolean).join("");
 
