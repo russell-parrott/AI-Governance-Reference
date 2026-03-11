@@ -6,32 +6,42 @@
 // Requires jsPDF on the page:
 // <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-const BRAND   = "#1a1a2e";   // dark heading colour — adjust to match site
-const ACCENT  = "#2563eb";   // blue for code badges
-const MUTED   = "#6b7280";   // grey for section label, footer
-const RULE    = "#e5e7eb";   // light grey for dividers
+const BRAND   = "#524d32";   // dark heading colour
+const ACCENT  = "#c9c4a7";   // blue for code badges
+const MUTED   = "#524D32";   // body/muted text colour
+const TEXT    = "#524D32";   // body text colour
+const RULE    = "#e5e7eb";   // light grey for dividers (table use only)
+const BG      = "#f7f6f2";   // page background
 
-const MARGIN  = 20;          // mm left/right
-const TOP     = 20;          // mm top
-const BOTTOM  = 20;          // mm bottom from page bottom
+const MARGIN  = 25;          // mm left/right
+const TOP     = 25;          // mm top
+const BOTTOM  = 25;          // mm bottom from page bottom
 const WIDTH   = 210;         // A4 width mm
 const USABLE  = WIDTH - MARGIN * 2;
+
+// ── BACKGROUND ───────────────────────────────────────────────────────
+
+function drawBackground(doc) {
+	doc.setFillColor(BG);
+	doc.rect(0, 0, 210, 297, "F");
+}
 
 // ── ENTRY POINT ────────────────────────────────────────────
 
 export async function downloadCardPDF(card) {
-  let md = "";
-  try {
-    const res = await fetch(`./cards/${card.file}`);
-    if (!res.ok) throw new Error();
-    md = await res.text();
-  } catch {
-    alert(`Could not load content for ${card.code}.`);
-    return;
-  }
+	let md = "";
+	try {
+		const res = await fetch(`./cards/${card.file}`);
+		if (!res.ok) throw new Error();
+		md = await res.text();
+	} catch {
+		alert(`Could not load content for ${card.code}.`);
+		return;
+	}
 
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit: "mm", format: "a4" });
+	const { jsPDF } = window.jspdf;
+	const doc = new jsPDF({ unit: "mm", format: "a4" });
+	drawBackground(doc);
 
   const ctx = {
     doc,
@@ -57,7 +67,7 @@ export async function downloadCardPDF(card) {
     doc.setFontSize(8);
     doc.setTextColor(MUTED);
     doc.text(
-      `AI Governance Atlas — ${card.code} ${card.title}   |   Page ${i} of ${pageCount}`,
+      `AI Governance Reference — ${card.code} ${card.title}   |   Page ${i} of ${pageCount}`,
       MARGIN, 297 - 10
     );
   }
@@ -131,16 +141,19 @@ function parseMarkdown(md) {
       });
       blocks.push({ type: "arrowlist", items });
       continue;
-    }
-
-    // Footer italic line
-    if (/^\*[^*].+[^*]\*$/.test(t)) {
-      blocks.push({ type: "footer", text: t.slice(1, -1) });
-      continue;
-    }
-
-    // Paragraph
-    blocks.push({ type: "para", text: t.replace(/\*\*(.+?)\*\*/g, "$1") });
+    } 
+	
+	if (t.startsWith("*")) continue;
+    
+	// Paragraph
+   blocks.push({
+  type: "para",
+  text: t
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/\n+/g, " ")
+    .replace(/\s{2,}/g, " ")
+    .trim()
+});
   }
 
   return blocks;
@@ -151,6 +164,7 @@ function parseMarkdown(md) {
 function checkPage(ctx, needed = 10) {
   if (ctx.y + needed > ctx.pageHeight - BOTTOM) {
     ctx.doc.addPage();
+    drawBackground(ctx.doc);
     ctx.y = TOP;
   }
 }
@@ -163,23 +177,7 @@ function gap(ctx, mm) {
 
 function renderHeader(ctx, card) {
   const { doc } = ctx;
-
-  // Code badge
-  doc.setFillColor(ACCENT);
-  doc.roundedRect(MARGIN, ctx.y, 22, 8, 2, 2, "F");
-  doc.setFontSize(9);
-  doc.setFont("helvetica", "bold");
-  doc.setTextColor("#ffffff");
-  doc.text(card.code, MARGIN + 11, ctx.y + 5.5, { align: "center" });
-
-  // Section label
-  doc.setFontSize(8);
-  doc.setFont("helvetica", "normal");
-  doc.setTextColor(MUTED);
-  doc.text(card.section.toUpperCase(), MARGIN + 26, ctx.y + 5.5);
-
-  ctx.y += 12;
-
+ 
   // Title
   doc.setFontSize(22);
   doc.setFont("helvetica", "bold");
@@ -222,15 +220,13 @@ function renderBlock(ctx, block) {
 }
 
 function renderRule(ctx) {
-  checkPage(ctx, 6);
-  ctx.doc.setDrawColor(RULE);
-  ctx.doc.setLineWidth(0.3);
-  ctx.doc.line(MARGIN, ctx.y, WIDTH - MARGIN, ctx.y);
-  ctx.y += 5;
+  ctx.y += 2;
 }
 
 function renderIntro(ctx, block) {
-  const lines = ctx.doc.splitTextToSize(block.text, USABLE - 8);
+  const introX = MARGIN + 6;
+  const introW = WIDTH - MARGIN - introX;   // full width to right margin
+  const lines = ctx.doc.splitTextToSize(block.text, introW);
   checkPage(ctx, lines.length * 6 + 8);
 
   // Left accent bar
@@ -240,7 +236,7 @@ function renderIntro(ctx, block) {
   ctx.doc.setFontSize(11);
   ctx.doc.setFont("helvetica", "bolditalic");
   ctx.doc.setTextColor(BRAND);
-  ctx.doc.text(lines, MARGIN + 6, ctx.y + 5);
+  ctx.doc.text(lines, introX, ctx.y + 5);
   ctx.y += lines.length * 6 + 8;
 }
 
@@ -264,13 +260,14 @@ function renderH3(ctx, block) {
 }
 
 function renderPara(ctx, block) {
-  const lines = ctx.doc.splitTextToSize(block.text, USABLE);
-  checkPage(ctx, lines.length * 5 + 4);
   ctx.doc.setFontSize(10);
+  const lines = ctx.doc.splitTextToSize(block.text, USABLE);
+  checkPage(ctx, lines.length * 5 + 2);
+  
   ctx.doc.setFont("helvetica", "normal");
-  ctx.doc.setTextColor("#1f2937");
+  ctx.doc.setTextColor(TEXT);
   ctx.doc.text(lines, MARGIN, ctx.y);
-  ctx.y += lines.length * 5 + 4;
+  ctx.y += lines.length * 5 + 2;
 }
 
 function renderList(ctx, block) {
@@ -278,36 +275,33 @@ function renderList(ctx, block) {
     const text = item.label ? `${item.label} — ${item.body}` : item.body;
     const lines = ctx.doc.splitTextToSize(text, USABLE - 6);
     checkPage(ctx, lines.length * 5 + 3);
-
     // Bullet dot
     ctx.doc.setFillColor(ACCENT);
     ctx.doc.circle(MARGIN + 1.5, ctx.y - 1, 1, "F");
-
     if (item.label) {
       // Bold label + normal body
       ctx.doc.setFontSize(10);
       ctx.doc.setFont("helvetica", "bold");
       ctx.doc.setTextColor(BRAND);
-      const labelWidth = ctx.doc.getTextWidth(item.label + " — ");
-      ctx.doc.text(item.label + " — ", MARGIN + 5, ctx.y);
+      const labelWidth = ctx.doc.getTextWidth(item.label + " - ");
+      ctx.doc.text(item.label + " - ", MARGIN + 5, ctx.y);
       ctx.doc.setFont("helvetica", "normal");
-      ctx.doc.setTextColor("#1f2937");
+      ctx.doc.setTextColor(TEXT);
       const bodyLines = ctx.doc.splitTextToSize(item.body, USABLE - 6 - labelWidth);
       // First line inline, rest indented
       ctx.doc.text(item.body.split(" ").slice(0, 8).join(" "), MARGIN + 5 + labelWidth, ctx.y);
       if (bodyLines.length > 1) {
-        ctx.y += 5;
-        ctx.doc.text(bodyLines.slice(1), MARGIN + 5, ctx.y);
-        ctx.y += (bodyLines.length - 1) * 5;
+         ctx.doc.text(bodyLines.slice(1), MARGIN + 5, ctx.y + 5);
+        ctx.y += bodyLines.length * 5;
       }
     } else {
       ctx.doc.setFontSize(10);
       ctx.doc.setFont("helvetica", "normal");
-      ctx.doc.setTextColor("#1f2937");
+      ctx.doc.setTextColor(TEXT);
       ctx.doc.text(lines, MARGIN + 5, ctx.y);
       ctx.y += (lines.length - 1) * 5;
     }
-    ctx.y += 6;
+    ctx.y += 5;
   }
 }
 
@@ -342,9 +336,12 @@ function renderTable(ctx, block) {
   const headerH = getRowH(headCells, "bold");
   checkPage(ctx, headerH + 4);
 
-  // Header row
+  const BORDER = "#c9c4a7";
+  const BW = 0.3;
+
+  // Header row — filled, no stripe
   const startY = ctx.y;
-  ctx.doc.setFillColor("#1a1a2e");
+  ctx.doc.setFillColor(BRAND);
   ctx.doc.rect(MARGIN, startY, USABLE, headerH, "F");
   ctx.doc.setFontSize(9);
   ctx.doc.setFont("helvetica", "bold");
@@ -352,37 +349,45 @@ function renderTable(ctx, block) {
   headCells.forEach((cell, i) => {
     const wrapped = ctx.doc.splitTextToSize(cell, colW - cellPad * 2);
     ctx.doc.text(wrapped, MARGIN + i * colW + cellPad, startY + cellPadV + lineH - 1);
+    if (i > 0) {
+      ctx.doc.setDrawColor(BORDER);
+      ctx.doc.setLineWidth(BW);
+      ctx.doc.line(MARGIN + i * colW, startY, MARGIN + i * colW, startY + headerH);
+    }
   });
+  ctx.doc.setDrawColor(BORDER);
+  ctx.doc.setLineWidth(BW);
+  ctx.doc.rect(MARGIN, startY, USABLE, headerH, "S");
   ctx.y = startY + headerH;
 
-  // Body rows
-  body.forEach((row, ri) => {
+  // Body rows — no stripe, borders only
+  body.forEach((row) => {
     const cells = parseRow(row);
     ctx.doc.setFont("helvetica", "normal");
     const rowH = getRowH(cells, "normal");
     checkPage(ctx, rowH + 2);
 
-    if (ri % 2 === 0) {
-      ctx.doc.setFillColor("#f8fafc");
-      ctx.doc.rect(MARGIN, ctx.y, USABLE, rowH, "F");
-    }
-
     ctx.doc.setFontSize(9);
     ctx.doc.setFont("helvetica", "normal");
-    ctx.doc.setTextColor("#1f2937");
+    ctx.doc.setTextColor(TEXT);
     cells.forEach((cell, i) => {
       const wrapped = ctx.doc.splitTextToSize(cell, colW - cellPad * 2);
       ctx.doc.text(wrapped, MARGIN + i * colW + cellPad, ctx.y + cellPadV + lineH - 1);
+      if (i > 0) {
+        ctx.doc.setDrawColor(BORDER);
+        ctx.doc.setLineWidth(BW);
+        ctx.doc.line(MARGIN + i * colW, ctx.y, MARGIN + i * colW, ctx.y + rowH);
+      }
     });
-
-    ctx.doc.setDrawColor(RULE);
-    ctx.doc.setLineWidth(0.2);
-    ctx.doc.line(MARGIN, ctx.y + rowH, WIDTH - MARGIN, ctx.y + rowH);
+    ctx.doc.setDrawColor(BORDER);
+    ctx.doc.setLineWidth(BW);
+    ctx.doc.rect(MARGIN, ctx.y, USABLE, rowH, "S");
     ctx.y += rowH;
   });
 
   ctx.y += 5;
 }
+
 
 function renderArrowList(ctx, block) {
   for (const item of block.items) {
@@ -409,7 +414,7 @@ function renderArrowList(ctx, block) {
       if (bodyText) {
         // Dash separator then normal body
         ctx.doc.setFont("helvetica", "normal");
-        ctx.doc.setTextColor("#1f2937");
+        ctx.doc.setTextColor(TEXT);
         const separator = " — ";
         const sepW = ctx.doc.getTextWidth(separator);
         ctx.doc.text(separator, MARGIN + 6 + codeW, ctx.y);
@@ -426,7 +431,7 @@ function renderArrowList(ctx, block) {
     } else {
       ctx.doc.setFontSize(9);
       ctx.doc.setFont("helvetica", "normal");
-      ctx.doc.setTextColor("#1f2937");
+      ctx.doc.setTextColor(TEXT);
       const lines = ctx.doc.splitTextToSize(bodyText, USABLE - 8);
       ctx.doc.text(lines, MARGIN + 6, ctx.y);
       ctx.y += (lines.length - 1) * 4.5;
@@ -436,11 +441,4 @@ function renderArrowList(ctx, block) {
   }
 }
 
-function renderFooter(ctx, block) {
-  checkPage(ctx, 8);
-  ctx.doc.setFontSize(8);
-  ctx.doc.setFont("helvetica", "italic");
-  ctx.doc.setTextColor(MUTED);
-  ctx.doc.text(block.text, MARGIN, ctx.y);
-  ctx.y += 6;
-}
+function renderFooter(ctx, block) {}
