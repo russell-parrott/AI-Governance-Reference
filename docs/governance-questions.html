@@ -143,6 +143,8 @@
 			</div>			
 			<div>
 				AI Governance Reference is an independent free to access reference published by Russell Parrott, an independent writer based in Greece specialising in how institutions lose accountability when they rely on automated systems they cannot audit or control.
+				<br/>
+				AI Governance Reference &copy; 2026 Russell Parrott | All Rights Reserved
 			</div>			
 		</footer>
 		
@@ -151,6 +153,16 @@
 			.then(resp => resp.json())
 			.then(cards => {
 				const filtered = cards.filter(card => card.section === "Governance Questions");
+				
+				filtered.forEach(card=>{
+					console.log(`<div class="card">
+					<h2><a href="card.html?code=${encodeURIComponent(card.code)}" title="${card.code} - ${card.title}">
+					  <span>${card.code}</span> - <span>${card.title}</span>
+					</a></h2>
+					${card.description}
+				  </div>`)
+				})
+				
 				const container = document.getElementById('list');
 				container.innerHTML = filtered.map(card => `
 				  <div class="card">
